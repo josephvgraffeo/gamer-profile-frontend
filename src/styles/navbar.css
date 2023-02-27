@@ -1,5 +1,7 @@
 .navbar > .navbar-toolbar {
     background-color: #202864e6;
+    position: sticky;
+    box-shadow: 3px 0 12px #000000a0;
 }
 
 .navbar > .navbar-toolbar > .navbar-header {

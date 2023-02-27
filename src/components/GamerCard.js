@@ -3,6 +3,7 @@ import "../styles/gamercard.css";
 
 export default function GamerCard() {
     const [gamerCard, setGamerCard] = useState([]);
+    useEffect(() => {getGamerCard()}, [])
     const getGamerCard = () => {
         fetch('https://gamer-profile-project.web.app/gamerCard')
             .then(res => res.json())
@@ -12,10 +13,9 @@ export default function GamerCard() {
 
     return (
         <div>
-            <button onClick={getGamerCard}>Display Gamer Card</button>
             {gamerCard.map(gamerCard => (
                 <div key={gamerCard.id}>
-                    <img src={gamerCard.profile_pic} alt="profile pic" />
+                    <img className="card-image" src={gamerCard.profile_pic} alt="profile pic" />
                     <div className="card-section-div">
                         <h2>{gamerCard.name}</h2>
                     </div>

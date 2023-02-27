@@ -7,15 +7,16 @@ div {
     text-align: center;
     background-color: #ffffff2f;
     border-radius: 5px;
-    margin: 10px;
+    margin: 12px;
     border: 2px solid #ff007b;
+    padding: 3px;
 }
 
 .card-section-div > h2, h4 {
     color: #ffffff;
 }
 
-img {
+.card-image {
     border-radius: 50%;
     height: 220px;
     width: 220px;

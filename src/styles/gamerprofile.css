@@ -1,0 +1,40 @@
+.prof-main-box {
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.prof-main-box > .prof-main-grid {
+    height: 100%;
+    max-width: 100%;
+}
+
+.prof-main-box > .prof-main-grid > .prof-card-grid {
+    background-color: #29347be6;
+    height: 100%;
+    width: 100%;
+    position: sticky;
+    box-shadow: 3px 0 12px #000000a0;
+}
+
+.prof-main-box > .prof-main-grid > .prof-card-grid > .prof-card-box {
+    height: 100%;
+    margin: 10px;
+    max-width: 100%;
+}
+
+.prof-main-box > .prof-main-grid > .prof-lib-grid {
+    background-color: #4755ace6;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.prof-main-box > .prof-main-grid > .prof-lib-grid > .prof-lib-box {
+    height: 100%;
+    margin: 10px;
+    max-width: 100%;
+    overflow-y: auto;
+}
