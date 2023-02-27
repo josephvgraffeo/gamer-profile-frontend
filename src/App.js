@@ -10,6 +10,7 @@ function App() {
     <>
       <Navbar />
         <Routes>
+          <Route path='/' element={<Signin />}/>
           <Route path='/signin' element={<Signin />}/>
           <Route path='/gamerprofile' element={<GamerProfile />}/>
           <Route path='/account' element={<AccountPage />}/>
