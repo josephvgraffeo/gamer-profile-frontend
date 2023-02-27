@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import "../styles/gamercard.css";
 
 export default function GamerCard() {
     const [gamerCard, setGamerCard] = useState([]);
@@ -8,8 +9,25 @@ export default function GamerCard() {
             .then(data => setGamerCard(data))
             .catch(error => console.error(error))
     }
-   
+
     return (
-        <h1>This is the gamer card</h1>
+        <div>
+            <button onClick={getGamerCard}>Display Gamer Card</button>
+            {gamerCard.map(gamerCard => (
+                <div key={gamerCard.id}>
+                    <img src={gamerCard.profile_pic} alt="profile pic" />
+                    <div className="card-section-div">
+                        <h2>{gamerCard.name}</h2>
+                    </div>
+                    <div className="card-section-div">
+                        <h4>{gamerCard.about}</h4>
+                    </div>
+                    <div className="card-section-div">
+                        <h4>Battle.net - {gamerCard.gamertags.battlenet}</h4>
+                        <h4>Steam ID - {gamerCard.gamertags.steam}</h4>
+                    </div>
+                </div>
+            ))}
+        </div>
     )
 }

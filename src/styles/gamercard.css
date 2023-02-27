@@ -1,0 +1,24 @@
+div {
+    align-items: center;
+    text-align: center;
+}
+
+.card-section-div {
+    text-align: center;
+    background-color: #ffffff2f;
+    border-radius: 5px;
+    margin: 10px;
+    border: 2px solid #ff007b;
+}
+
+.card-section-div > h2, h4 {
+    color: #ffffff;
+}
+
+img {
+    border-radius: 50%;
+    height: 220px;
+    width: 220px;
+    align-content: center;
+    border: 5px solid #ff007b;
+}
