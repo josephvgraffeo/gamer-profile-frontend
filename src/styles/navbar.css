@@ -2,6 +2,10 @@
     background-color: #202864e6;
 }
 
+.navbar > .navbar-toolbar > .navbar-header {
+    font-weight: 600;
+}
+
 .navbar > .navbar-toolbar > .navbar-stack > .navbar-box {
     display: flex;
     flex-grow: 1;
