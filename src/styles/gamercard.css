@@ -12,11 +12,12 @@ div {
     padding: 3px;
 }
 
-.card-section-div > h2, h4 {
+.card-section-div > h1, h2, h3, h4, h5 {
     color: #ffffff;
 }
 
 .card-image {
+    margin: 5px;
     border-radius: 50%;
     height: 220px;
     width: 220px;
