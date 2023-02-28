@@ -1,0 +1,9 @@
+.game-cover {
+    height: 190px;
+    width: 135px;
+    border: 2.5px solid #000000;
+}
+
+.library-grid-container {
+    margin: 5px;
+}
