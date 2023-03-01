@@ -12,7 +12,7 @@ div {
     padding: 3px;
 }
 
-.card-section-div > h2, h4 {
+.card-section-div > h1, h2, h3, h4, h5 {
     color: #ffffff;
 }
 
@@ -22,4 +22,15 @@ div {
     width: 220px;
     align-content: center;
     border: 5px solid #ff007b;
+}
+
+div > .edit-card-text {
+    color: #ffffff;
+    text-align: right;
+    margin-top: -12px;
+}
+
+div > .edit-card-text > .icon-button > .edit-button {
+    color: #ffffff;
+    text-align: right;
 }

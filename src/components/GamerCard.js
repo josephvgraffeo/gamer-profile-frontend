@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { CircularProgress } from "@mui/material";
+import { CircularProgress, IconButton } from "@mui/material";
+import EditIcon from '@mui/icons-material/Edit';
 import "../styles/gamercard.css";
 
 export default function GamerCard() {
@@ -16,6 +17,10 @@ export default function GamerCard() {
             .catch(error => console.error(error))
     }
 
+    function capitalizeFirstLetter(element) {
+        return element.charAt(0).toUpperCase() + element.slice(1)
+    }
+
     return (
         <>
             {isLoading
@@ -23,21 +28,25 @@ export default function GamerCard() {
                     color="secondary"
                     size={100}
                     style={{ position: 'absolute', top: '35%', left: '35%', transform: 'translate(-50%, -50%)' }}
-                    />
+                />
                 : <div>
                     {gamerCard.map(gamerCard => (
-                        <div key={gamerCard.id}>
+                        <div key={gamerCard.username}>
                             <img className="card-image" src={gamerCard.profile_pic} alt="profile pic" />
                             <div className="card-section-div">
-                                <h2>{gamerCard.name}</h2>
+                                <h3>{gamerCard.greeting}</h3>
                             </div>
                             <div className="card-section-div">
-                                <h4>{gamerCard.about}</h4>
+                                <h3>{gamerCard.about}</h3>
                             </div>
                             <div className="card-section-div">
-                                <h4>Battle.net - {gamerCard.gamertags.battlenet}</h4>
-                                <h4>Steam ID - {gamerCard.gamertags.steam}</h4>
+                                {Object.keys(gamerCard.gamertags).map((element) => (
+                                    <h4 element={element}>
+                                        {capitalizeFirstLetter(element)} - {gamerCard.gamertags[element]}
+                                    </h4>
+                                ))}
                             </div>
+                            <p className="edit-card-text">Edit<IconButton className="icon-button"><EditIcon className="edit-button" /></IconButton></p>
                         </div>
                     ))}
                 </div>
