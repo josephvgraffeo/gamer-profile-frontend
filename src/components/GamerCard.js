@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { CircularProgress, IconButton } from "@mui/material";
+import { Button, CircularProgress, IconButton, TextField } from "@mui/material";
 import EditIcon from '@mui/icons-material/Edit';
 import "../styles/gamercard.css";
 
@@ -25,7 +25,7 @@ export default function GamerCard() {
             .catch(error => console.error(error))
     }
 
-    const handleEditing = () => {
+    const handleIsEditing = () => {
         setIsEditing(true);
         setEditedGamerCard(gamerCard[0]);
     }
@@ -81,6 +81,7 @@ export default function GamerCard() {
                             {isEditing ? (
                                 <div className="card-section-div">
                                     <textarea
+                                        className="text-field"
                                         name="greeting"
                                         value={editedGamerCard.greeting}
                                         onChange={handleChangedData}
@@ -94,6 +95,7 @@ export default function GamerCard() {
                             {isEditing ? (
                                 <div className="card-section-div">
                                     <textarea
+                                        className="text-field"
                                         name="about"
                                         value={editedGamerCard.about}
                                         onChange={handleChangedData}
@@ -105,22 +107,22 @@ export default function GamerCard() {
                                 </div>
                             )}
                             <div className="card-section-div">
-                                {Object.keys(gamerCard.gamertags).map((element) => (
-                                    <div key={element}>
-                                        <h4 element={element}>
-                                            {capitalizeFirstLetter(element)} - {" "}
-                                            {gamerCard.gamertags[element]}
+                                {Object.keys(gamerCard.gamertags).map((tag) => (
+                                    <div key={tag}>
+                                        <h4 tag={tag}>
+                                            {capitalizeFirstLetter(tag)} - {" "}
+                                            {gamerCard.gamertags[tag]}
                                         </h4>
                                     </div>
                                 ))}
                             </div>
                             {isEditing ? (
                                 <div className="edit-button-group">
-                                    <button className="save-button" onClick={handleSave}>Save</button>
-                                    <button className="cancel-button" onClick={handleCancel}>Cancel</button>
+                                    <Button variant="contained" className="save-button" onClick={handleSave}>Save Changes</Button>
+                                    <Button variant="contained" className="cancel-button" onClick={handleCancel}>Cancel</Button>
                                 </div>
                             ) : (
-                                <p className="edit-card-text"> Edit <IconButton className="icon-button" onClick={handleEditing}><EditIcon className="edit-button" /></IconButton></p>
+                                <p className="edit-card-text"> Edit <IconButton className="icon-button" onClick={handleIsEditing}><EditIcon className="edit-button" /></IconButton></p>
                             )}
                         </div>
                     ))}
