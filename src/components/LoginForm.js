@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Box, Button, Grid, TextField } from '@mui/material';
+import { Link } from 'react-router-dom';
 import "../styles/signupform.css"
 
 export default function LoginForm() {
@@ -39,11 +40,11 @@ export default function LoginForm() {
                             />
                         </Grid>
                         <Grid item xs={12}>
-                            <Button className="signup-form-button" type="submit" variant="contained">
-                                Sign Up
+                            <Button className="signup-form-button" type="submit" variant="contained" component={Link} to="/gamerprofile">
+                                Login
                             </Button>
-                            <Button className="signup-form-button" type="submit" variant="contained">
-                                Already a user? Login
+                            <Button className="signup-form-button" type="submit" variant="contained" component={Link} to="/signup">
+                                Don't have an account? Sign up
                             </Button>
                         </Grid>
                     </Grid>
