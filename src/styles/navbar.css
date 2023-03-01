@@ -11,6 +11,7 @@
 .navbar > .navbar-toolbar > .navbar-stack > .navbar-box {
     display: flex;
     flex-grow: 1;
+    position: sticky;
 }
 
 .navbar > .navbar-toolbar > .navbar-stack > .navbar-box > .navbar-button {

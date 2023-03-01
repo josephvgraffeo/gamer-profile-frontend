@@ -1,5 +1,7 @@
-export default function Signin() {
+import SignupForm from "../components/SignupForm.js"
+
+export default function Signup() {
     return (
-        <h1>Sign in Here</h1>
+        <SignupForm />
     )
 }

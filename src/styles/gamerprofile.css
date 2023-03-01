@@ -8,13 +8,13 @@
 .prof-main-box > .prof-main-grid {
     height: 100%;
     max-width: 100%;
+    position: relative;
 }
 
 .prof-main-box > .prof-main-grid > .prof-card-grid {
     background-color: #29347be6;
     height: 100%;
     width: 100%;
-    position: sticky;
     box-shadow: 3px 0 12px #000000a0;
 }
 

@@ -9,7 +9,7 @@ export default function Navbar() {
     return (
         <AppBar className="navbar" position="static">
             <Toolbar className="navbar-toolbar" sx={{ justifyContent: 'space-between' }}>
-                <Typography className="navbar-header" variant="h4" component="div" >TBD</Typography>
+                <Typography className="navbar-header" variant="h4" component="div" >{navHeader}</Typography>
                 <Stack className="navbar-stack" direction="row" spacing={2}>
                     <Box className="navbar-box">
                         <Button className="navbar-button" size="large" variant="text" component={Link} to="/gamerprofile">Profile</Button>

@@ -2,8 +2,13 @@
     height: 190px;
     width: 135px;
     border: 2.5px solid #000000;
+    margin: 12px;
 }
 
-.library-grid-container {
+.status-row {
     margin: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }

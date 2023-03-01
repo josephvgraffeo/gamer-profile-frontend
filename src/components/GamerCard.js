@@ -64,8 +64,8 @@ export default function GamerCard() {
                     size={100}
                     style={{
                         position: "absolute",
-                        top: "35%",
-                        left: "35%",
+                        top: "0%",
+                        left: "30%",
                         transform: "translate(-50%, -50%)",
                     }}
                 />
