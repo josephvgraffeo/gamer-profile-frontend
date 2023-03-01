@@ -17,6 +17,7 @@ div {
 }
 
 .card-image {
+    margin: 5px;
     border-radius: 50%;
     height: 220px;
     width: 220px;
