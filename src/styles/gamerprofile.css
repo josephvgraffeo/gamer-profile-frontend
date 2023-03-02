@@ -15,18 +15,21 @@
     height: 100%;
     width: 100%;
     box-shadow: 3px 0 12px #000000a0;
-}
-
-.prof-main-box > .prof-main-grid > .prof-card-grid > .prof-card-box {
-    height: 100%;
-    margin: 10px;
-    max-width: 100%;
+    overflow: auto;
 }
 
 .prof-main-box > .prof-main-grid > .prof-lib-grid {
     background-color: #3d4ba3dd;
     height: 100%;
     width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.prof-main-box > .prof-main-grid > .prof-card-grid > .prof-card-box {
+    height: 100%;
+    margin: 10px;
+    max-width: 100%;
 }
 
 .prof-main-box > .prof-main-grid > .prof-lib-grid > .prof-lib-box {
