@@ -8,7 +8,6 @@
 .prof-main-box > .prof-main-grid {
     height: 100%;
     max-width: 100%;
-    position: relative;
 }
 
 .prof-main-box > .prof-main-grid > .prof-card-grid {
@@ -25,16 +24,13 @@
 }
 
 .prof-main-box > .prof-main-grid > .prof-lib-grid {
-    background-color: #4755ace6;
+    background-color: #3d4ba3dd;
     height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 .prof-main-box > .prof-main-grid > .prof-lib-grid > .prof-lib-box {
     height: 100%;
     margin: 10px;
     max-width: 100%;
-    overflow-y: auto;
 }

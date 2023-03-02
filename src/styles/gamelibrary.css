@@ -1,14 +1,25 @@
-.game-cover {
-    height: 190px;
-    width: 135px;
-    border: 2.5px solid #000000;
-    margin: 12px;
+.main-status-container {
+    display: block;
 }
 
-.status-row {
-    margin: 5px;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+.main-status-container > .status-row {
+    display: block;
+}
+
+.main-status-container > .status-row > .status-row-playing {
+    background-color: rgba(81, 255, 0, 0.495);
+    display: block;
+    height: 40vh;
+}
+
+.main-status-container > .status-row > .status-row-completed {
+    background-color: rgba(81, 255, 0, 0.495);
+    display: block;
+    height: 40vh;
+}
+
+.main-status-container > .status-row > .status-row-backlog {
+    background-color: rgba(81, 255, 0, 0.495);
+    display: block;
+    height: 40vh;
 }
