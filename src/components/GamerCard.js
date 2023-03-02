@@ -11,11 +11,11 @@ export default function GamerCard() {
 
     useEffect(() => { getGamerCard() }, [])
 
-    const capitalizeFirstLetter = (element) => {
+    function capitalizeFirstLetter(element) {
         return element.charAt(0).toUpperCase() + element.slice(1)
     }
 
-    const getGamerCard = () => {
+    function getGamerCard() {
         fetch('https://gamer-profile-project.web.app/gamerCard')
             .then(res => res.json())
             .then(data => {
@@ -25,17 +25,17 @@ export default function GamerCard() {
             .catch(error => console.error(error))
     }
 
-    const handleIsEditing = () => {
+    function handleIsEditing() {
         setIsEditing(true);
         setEditedGamerCard(gamerCard[0]);
     }
 
-    const handleCancel = () => {
+    function handleCancel() {
         setIsEditing(false);
         setEditedGamerCard({});
     }
 
-    const handleSave = (e) => {
+    function handleSave(e) {
         e.preventDefault();
         fetch('https://gamer-profile-project.web.app/gamerCard/piratehntr', {
             method: 'PATCH',
@@ -50,7 +50,7 @@ export default function GamerCard() {
             .catch(error => console.error(error))
     }
 
-    const handleChangedData = (e) => {
+    function handleChangedData(e) {
         e.preventDefault();
         const { name, value } = e.target;
         setEditedGamerCard(previousData => ({ ...previousData, [name]: value }));

@@ -5,8 +5,10 @@ import "../styles/gamelibrary.css"
 export default function GamerLibrary() {
     const [games, setGames] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    
     useEffect(() => { getGames(); }, [])
-    const getGames = () => {
+
+    function getGames() {
         fetch('https://gamer-profile-project.web.app/games')
             .then(res => res.json())
             .then(data => {

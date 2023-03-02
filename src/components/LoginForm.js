@@ -1,19 +1,30 @@
 import { useState } from 'react';
 import { Box, Button, Grid, TextField, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { UserAuth } from '../context/AuthContext.js';
 import "../styles/signupform.css"
 
 export default function LoginForm() {
+    const { loginUser } = UserAuth();
     const [email, setEmail] = useState('');
-    const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+
+    const navigate = useNavigate();
 
     const handleEmailChange = (e) => setEmail(e.target.value);
     const handlePasswordChange = (e) => setPassword(e.target.value);
 
-    const handleSubmit = (e) => {
+    async function handleSubmit(e) {
         e.preventDefault();
-        console.log({ email })
+        setError('')
+        try {
+            await loginUser(email, password);
+            navigate("/gamerprofile");
+        } catch (e) {
+            setError(e.message);
+            console.log(e.message);
+        }
     };
 
     return (
@@ -26,7 +37,7 @@ export default function LoginForm() {
                             <TextField
                                 label="Email"
                                 variant="outlined"
-                                value={username}
+                                value={email}
                                 onChange={handleEmailChange}
                             />
                         </Grid>
@@ -40,7 +51,7 @@ export default function LoginForm() {
                             />
                         </Grid>
                         <Grid item xs={12}>
-                            <Button className="signup-form-button" type="submit" variant="contained" component={Link} to="/gamerprofile">
+                            <Button className="signup-form-button" type="submit" variant="contained">
                                 Login
                             </Button>
                             <p>Don't have an account? <Link to="/signup">Sign up</Link></p>

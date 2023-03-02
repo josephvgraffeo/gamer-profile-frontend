@@ -1,5 +1,5 @@
 import { AppBar, Toolbar, Typography, Stack, Button, Box } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext.js";
 import "../styles/navbar.css";
@@ -7,9 +7,9 @@ import "../styles/navbar.css";
 export default function Navbar() {
     const [navHeader, setNavHeader] = useState("CertifiedG****")
     const navigate = useNavigate();
-    const { logout } = UserAuth();;
+    const { user, logout } = UserAuth();;
 
-    const handleLogout = async () => {
+    async function handleLogout() {
         try {
             await logout();
             navigate("/login")
@@ -18,7 +18,7 @@ export default function Navbar() {
             console.log(e.message);
         }
     }
-    
+
     return (
         <AppBar className="navbar" position="static">
             <Toolbar className="navbar-toolbar" sx={{ justifyContent: 'space-between' }}>
@@ -26,10 +26,10 @@ export default function Navbar() {
                 <Stack className="navbar-stack" direction="row" spacing={2}>
                     <Box className="navbar-box">
                         <Button className="navbar-button" size="large" variant="text" component={Link} to="/gamerprofile">Profile</Button>
-                            <br />
+                        <br />
                         <Button className="navbar-button" size="large" variant="text" component={Link} to="/account">Account</Button>
-                            <br />
-                        <Button className="navbar-button" size="large" variant="text" onClick={handleLogout}>Logout</Button>
+                        <br />
+                        <Button className="navbar-button" size="large" variant="text" onClick={handleLogout}>{user ? "Logout" : "Login"}</Button>
                     </Box>
                 </Stack>
             </Toolbar>

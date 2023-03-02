@@ -14,13 +14,13 @@ export default function SignupForm() {
     const handleEmailChange = (e) => setEmail(e.target.value);
     const handlePasswordChange = (e) => setPassword(e.target.value);
 
-    const handleSubmit = async (e) => {
+    async function handleSubmit(e) {
         e.preventDefault();
         setError('')
         try {
             await createUser(email, password);
             navigate("/gamerprofile")
-        } catch (e){
+        } catch (e) {
             setError(e.message);
             console.log(e.message);
         }
