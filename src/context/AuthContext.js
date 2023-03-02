@@ -4,7 +4,7 @@ import { auth } from "../Firebase.js";
 
 const UserContext = createContext();
 
-export const AuthContextProvider = ({children}) => {
+export default function AuthContextProvider({children}) {
     const [user, setUser] = useState({})
 
     function createUser(email, password) {

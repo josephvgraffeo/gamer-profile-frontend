@@ -29,6 +29,8 @@ export default function Navbar() {
                         <br />
                         <Button className="navbar-button" size="large" variant="text" component={Link} to="/account">Account</Button>
                         <br />
+                        <Button className="navbar-button" size="large" variant="text" component={Link} to="/contact">Contact</Button>
+                        <br />
                         <Button className="navbar-button" size="large" variant="text" onClick={handleLogout}>{user ? "Logout" : "Login"}</Button>
                     </Box>
                 </Stack>
