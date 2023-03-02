@@ -1,10 +1,23 @@
 import { AppBar, Toolbar, Typography, Stack, Button, Box } from "@mui/material";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { UserAuth } from "../context/AuthContext.js";
 import "../styles/navbar.css";
 
 export default function Navbar() {
     const [navHeader, setNavHeader] = useState("CertifiedG****")
+    const navigate = useNavigate();
+    const { logout } = UserAuth();;
+
+    const handleLogout = async () => {
+        try {
+            await logout();
+            navigate("/login")
+            console.log("logged out");
+        } catch (e) {
+            console.log(e.message);
+        }
+    }
     
     return (
         <AppBar className="navbar" position="static">
@@ -16,7 +29,7 @@ export default function Navbar() {
                             <br />
                         <Button className="navbar-button" size="large" variant="text" component={Link} to="/account">Account</Button>
                             <br />
-                        <Button className="navbar-button" size="large" variant="text" component={Link} to="/login">Logout</Button>
+                        <Button className="navbar-button" size="large" variant="text" onClick={handleLogout}>Logout</Button>
                     </Box>
                 </Stack>
             </Toolbar>
