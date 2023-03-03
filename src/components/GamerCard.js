@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Button, CircularProgress, IconButton, TextField } from "@mui/material";
+import { Button, CircularProgress, IconButton } from "@mui/material";
 import EditIcon from '@mui/icons-material/Edit';
 import "../styles/gamercard.css";
 
