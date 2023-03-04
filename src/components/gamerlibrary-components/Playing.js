@@ -1,5 +1,7 @@
-import { CircularProgress } from "@mui/material";
+import { CircularProgress, IconButton } from "@mui/material";
 import { useEffect, useState } from "react";
+import AddGameToLibrary from "./AddToLibrary.js";
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import "../../styles/librarycomponent.css";
 
 export default function Playing() {
@@ -20,8 +22,8 @@ export default function Playing() {
 
     return (
         <>
-            {isLoading ? (
-                <CircularProgress
+            {isLoading
+                ? (<CircularProgress
                     color="secondary"
                     size={100}
                     style={{
@@ -31,23 +33,25 @@ export default function Playing() {
                         transform: "translate(-50%, -50%)",
                     }}
                 />
-            ) : (
-                <>
-                    <div>
-                        <h1>Playing:</h1>
-                        {playingLibrary.map((playingEntry) => (
-                            <div key={playingEntry._id}>
-                                {playingEntry.games.map((game) => (
-                                    <div key={game.title}>
-                                        <img className="library-image" src={game.cover_image} alt={game.title} />
-                                        <h4 className="library-title">{game.title}</h4>
-                                    </div>
-                                ))}
-                            </div>
-                        ))}
-                    </div>
-                </>
-            )}
+                ) : (
+                    <>
+                        <div>
+                            <AddGameToLibrary />
+                            <IconButton><AddCircleOutlineIcon /></IconButton>
+                            <h1>Playing:</h1>
+                            {playingLibrary.map((playingEntry) => (
+                                <div key={playingEntry._id}>
+                                    {playingEntry.games.map((game) => (
+                                        <div key={game.title}>
+                                            <img className="library-image" src={game.cover_image} alt={game.title} />
+                                            <h4 className="library-title">{game.title}</h4>
+                                        </div>
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
+                    </>
+                )}
         </>
     )
 }
