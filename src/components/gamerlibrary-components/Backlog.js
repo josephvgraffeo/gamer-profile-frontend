@@ -1,5 +1,6 @@
-import { CircularProgress } from "@mui/material";
+import { CircularProgress, IconButton } from "@mui/material";
 import { useEffect, useState } from "react";
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import "../../styles/librarycomponent.css";
 
 export default function Backlog() {
@@ -34,6 +35,7 @@ export default function Backlog() {
             ) : (
                 <>
                     <div>
+                        <IconButton><AddCircleOutlineIcon /></IconButton>
                         <h1>Backlog:</h1>
                         {backlogLibrary.map((backlogEntry) => (
                             <div key={backlogEntry._id}>

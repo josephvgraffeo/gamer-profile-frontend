@@ -1,5 +1,6 @@
-import { CircularProgress } from "@mui/material";
+import { CircularProgress, IconButton } from "@mui/material";
 import { useEffect, useState } from "react";
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import "../../styles/librarycomponent.css";
 
 export default function Completed() {
@@ -34,6 +35,7 @@ export default function Completed() {
             ) : (
                 <>
                     <div>
+                        <IconButton><AddCircleOutlineIcon /></IconButton>
                         <h1>Completed:</h1>
                         {completedLibrary.map((completedEntry) => (
                             <div key={completedEntry._id}>
