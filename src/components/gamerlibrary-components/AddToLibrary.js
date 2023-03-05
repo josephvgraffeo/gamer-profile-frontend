@@ -1,4 +1,4 @@
-import { Select, MenuItem, Button } from "@mui/material";
+import { Select, MenuItem, Button, FormControl, TextField, Rating } from "@mui/material";
 import { useState, useEffect } from "react";
 
 export default function AddGameToLibrary(props) {
@@ -48,6 +48,14 @@ export default function AddGameToLibrary(props) {
                     disabled={!selectedGame}
                     style={{ backgroundColor: selectedGame ? 'green' : 'gray', color: 'white' }}
                 >Add</Button>
+            </div>
+            <div>
+                <FormControl>
+                    <Rating name="rating" precision={0.5} />
+                    <TextField label="Hours Played" />
+                    <TextField label="Platform/Console" />
+                    <TextField label="Comments" />
+                </FormControl>
             </div>
         </>
     )
