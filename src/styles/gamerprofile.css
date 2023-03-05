@@ -11,10 +11,10 @@
 }
 
 .prof-main-box > .prof-main-grid > .prof-card-grid {
-    background-color: #29347be6;
+    background-color: #17236eee;
     height: 100%;
     width: 100%;
-    box-shadow: 3px 0 12px #000000a0;
+    box-shadow: 5px 0 10px #000000cd;
     overflow: auto;
 }
 

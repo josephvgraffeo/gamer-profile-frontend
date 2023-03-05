@@ -8,7 +8,7 @@ export default function AddGameToLibrary(props) {
     async function handleAddGameToLibrary() {
         fetch(`https://gamer-profile-project.web.app/gamerLibrary/${props.status}`, {
             method: 'POST',
-            body: JSON.stringify({ gameId: selectedGame, _id: selectedGame}),
+            body: JSON.stringify({ gameId: selectedGame, _id: selectedGame }),
             headers: { 'Content-Type': 'application/json' }
         })
             .then(res => res.json())
@@ -43,12 +43,8 @@ export default function AddGameToLibrary(props) {
                         <MenuItem key={game._id} value={game._id}>{game.title}</MenuItem>
                     ))}
                 </Select>
-                <Button
-                    onClick={handleAddGameToLibrary}
-                    disabled={!selectedGame}
-                    style={{ backgroundColor: selectedGame ? 'green' : 'gray', color: 'white' }}
-                >Add</Button>
             </div>
+            <br />
             <div>
                 <FormControl>
                     <Rating name="rating" precision={0.5} />
@@ -57,6 +53,12 @@ export default function AddGameToLibrary(props) {
                     <TextField label="Comments" />
                 </FormControl>
             </div>
+            <br />
+            <Button
+                onClick={handleAddGameToLibrary}
+                disabled={!selectedGame}
+                style={{ backgroundColor: selectedGame ? 'green' : 'gray', color: 'white' }}>Add
+            </Button>
         </>
     )
 }

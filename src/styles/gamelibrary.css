@@ -3,23 +3,32 @@
 }
 
 .main-status-container > .status-row {
-    display: block;
+    display: inline-block;
 }
 
 .main-status-container > .status-row > .status-row-playing {
-    background-color: rgba(81, 255, 0, 0.495);
+    background-color: #11119258;
     display: block;
     height: 40vh;
+    box-shadow: 5px 5px 10px #00000095;
+    overflow-x: scroll;
+    white-space: nowrap;
 }
 
 .main-status-container > .status-row > .status-row-completed {
-    background-color: rgba(81, 255, 0, 0.495);
+    background-color: #11119258;
     display: block;
     height: 40vh;
+    box-shadow: 5px 5px 10px #00000095;
+    overflow-x: scroll;
+    white-space: nowrap;
 }
 
 .main-status-container > .status-row > .status-row-backlog {
-    background-color: rgba(81, 255, 0, 0.495);
+    background-color: #11119258;
     display: block;
     height: 40vh;
+    box-shadow: 5px 5px 10px #00000095;
+    overflow-x: scroll;
+    white-space: nowrap;
 }

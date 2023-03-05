@@ -1,4 +1,4 @@
-import { CircularProgress, IconButton, Modal } from "@mui/material";
+import { CircularProgress, IconButton, Modal, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import "../../styles/librarycomponent.css";
@@ -45,23 +45,28 @@ export default function Backlog() {
             ) : (
                 <>
                     <div>
-                        <IconButton onClick={handleFormShowing}><AddCircleOutlineIcon /></IconButton>
+                        <IconButton className="add-button" onClick={handleFormShowing}>
+                            <Typography className="add-button-text">Add To Backlog</Typography>
+                            <AddCircleOutlineIcon className="add-button-icon" />
+                        </IconButton>
                         <h1>Backlog:</h1>
-                        {backlogLibrary.map((backlogEntry) => (
-                            <div key={backlogEntry._id}>
-                                {backlogEntry.games.map((game) => (
-                                    <div key={game.title}>
-                                        <img className="library-image" src={game.cover_image} alt={game.title} />
-                                        <h4 className="library-title">{game.title}</h4>
-                                    </div>
-                                ))}
-                            </div>
-                        ))}
+                        <div>
+                            {backlogLibrary.map((backlogEntry) => (
+                                <div key={backlogEntry._id}>
+                                    {backlogEntry.games.map((game) => (
+                                        <div key={game.title} className="library-row">
+                                            <img className="library-image" src={game.cover_image} alt={game.title} />
+                                            <h4 className="library-title">{game.title}</h4>
+                                        </div>
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
                         {formShowing && (
-                                <Modal open={true} onClose={handleCloseForm}>
-                                    <AddGameToLibrary status="backlog"/>
-                                </Modal>
-                            )}
+                            <Modal open={true} onClose={handleCloseForm}>
+                                <AddGameToLibrary status="backlog" />
+                            </Modal>
+                        )}
                     </div>
                 </>
             )}

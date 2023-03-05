@@ -1,4 +1,4 @@
-import { CircularProgress, IconButton, Modal } from "@mui/material";
+import { CircularProgress, IconButton, Modal, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import AddGameToLibrary from "./AddToLibrary.js";
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
@@ -45,18 +45,23 @@ export default function Playing() {
                 ) : (
                     <>
                         <div>
-                            <IconButton onClick={handleFormShowing}><AddCircleOutlineIcon /></IconButton>
+                            <IconButton className="add-button" onClick={handleFormShowing}>
+                                <Typography className="add-button-text">Add To Playing</Typography>
+                                <AddCircleOutlineIcon className="add-button-icon" />
+                            </IconButton>
                             <h1>Playing:</h1>
-                            {playingLibrary.map((playingEntry) => (
-                                <div key={playingEntry._id}>
-                                    {playingEntry.games.map((game) => (
-                                        <div key={game.title}>
-                                            <img className="library-image" src={game.cover_image} alt={game.title} />
-                                            <h4 className="library-title">{game.title}</h4>
-                                        </div>
-                                    ))}
-                                </div>
-                            ))}
+                            <div>
+                                {playingLibrary.map((playingEntry) => (
+                                    <div key={playingEntry._id} >
+                                        {playingEntry.games.map((game) => (
+                                            <div key={game.title} className="library-row">
+                                                <img className="library-image" src={game.cover_image} alt={game.title} />
+                                                <h4 className="library-title">{game.title}</h4>
+                                            </div>
+                                        ))}
+                                    </div>
+                                ))}
+                            </div>
                             {formShowing && (
                                 <Modal open={true} onClose={handleCloseForm}>
                                     <AddGameToLibrary status="playing" />

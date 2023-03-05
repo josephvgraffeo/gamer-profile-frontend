@@ -5,11 +5,12 @@ div {
 
 .card-section-div {
     text-align: center;
-    background-color: #ffffff2f;
-    border-radius: 5px;
+    background-color: #728cff64;
+    border-radius: 7px;
     margin: 12px;
     border: 2px solid #ff007b;
-    padding: 3px;
+    box-shadow: 5px 0 10px #0000005f;
+    padding: px;
 }
 
 .card-section-div > h1, h2, h3, h4, h5 {
@@ -23,6 +24,7 @@ div {
     width: 220px;
     align-content: center;
     border: 5px solid #ff007b;
+    box-shadow: 5px 0 15px #0000005f;
 }
 
 div > .edit-card-text {
