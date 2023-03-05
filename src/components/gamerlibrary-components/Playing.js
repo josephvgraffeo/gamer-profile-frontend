@@ -49,7 +49,7 @@ export default function Playing() {
                                 <Typography className="add-button-text">Add To Playing</Typography>
                                 <AddCircleOutlineIcon className="add-button-icon" />
                             </IconButton>
-                            <h1>Playing:</h1>
+                            <h1 className="status-text">Playing:</h1>
                             <div>
                                 {playingLibrary.map((playingEntry) => (
                                     <div key={playingEntry._id} >

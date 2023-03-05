@@ -23,7 +23,7 @@
     margin-left: 4vw;
 }
 
-h1 {
+.status-text {
     color: #ffffff;
     text-align: left;
     margin-left: 20px;
@@ -40,13 +40,15 @@ h1 {
 
 .add-button>.add-button-icon {
     color: #28cd12;
+    margin-top: .5vh;
+    margin-right: -61vw;
 }
 
 .library-image {
     margin-top: 0px;
     height: 200px;
     width: 140px;
-    outline: 1.5px solid #000000;
+    outline: 2px solid #000000;
     box-shadow: 5px 0 10px #00000096;
 }
 

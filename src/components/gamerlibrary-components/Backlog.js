@@ -49,7 +49,7 @@ export default function Backlog() {
                             <Typography className="add-button-text">Add To Backlog</Typography>
                             <AddCircleOutlineIcon className="add-button-icon" />
                         </IconButton>
-                        <h1>Backlog:</h1>
+                        <h1 className="status-text">Backlog:</h1>
                         <div>
                             {backlogLibrary.map((backlogEntry) => (
                                 <div key={backlogEntry._id}>

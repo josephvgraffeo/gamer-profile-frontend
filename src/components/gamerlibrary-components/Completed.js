@@ -49,7 +49,7 @@ export default function Completed() {
                             <Typography className="add-button-text">Add To Completed</Typography>
                             <AddCircleOutlineIcon className="add-button-icon" />
                         </IconButton>
-                        <h1>Completed:</h1>
+                        <h1 className="status-text">Completed:</h1>
                         <div>
                             {completedLibrary.map((completedEntry) => (
                                 <div key={completedEntry._id}>

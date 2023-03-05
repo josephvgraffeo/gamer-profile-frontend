@@ -6,7 +6,7 @@ export default function AddGameToLibrary(props) {
     const [gamesList, setGamesList] = useState([]);
     const [selectedGame, setSelectedGame] = useState("");
 
-    async function handleAddGameToLibrary() {
+    function handleAddGameToLibrary() {
         fetch(`https://gamer-profile-project.web.app/gamerLibrary/${props.status}`, {
             method: 'POST',
             body: JSON.stringify({ gameId: selectedGame, _id: selectedGame }),
@@ -18,6 +18,10 @@ export default function AddGameToLibrary(props) {
                 setSelectedGame("");
             })
             .catch(error => console.error(error))
+    }
+
+    function handleAdditionalEntryInfo() {
+
     }
 
     useEffect(() => {
