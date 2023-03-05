@@ -35,7 +35,7 @@ export default function GamerCard() {
         setEditedGamerCard({});
     }
 
-    function handleSave(e) {
+    function handleUpdateGamerCard(e) {
         e.preventDefault();
         fetch('https://gamer-profile-project.web.app/gamerCard/piratehntr', {
             method: 'PATCH',
@@ -118,7 +118,7 @@ export default function GamerCard() {
                             </div>
                             {isEditing ? (
                                 <div className="edit-button-group">
-                                    <Button variant="contained" className="save-button" onClick={handleSave}>Save Changes</Button>
+                                    <Button variant="contained" className="save-button" onClick={handleUpdateGamerCard}>Save Changes</Button>
                                     <Button variant="contained" className="cancel-button" onClick={handleCancel}>Cancel</Button>
                                 </div>
                             ) : (

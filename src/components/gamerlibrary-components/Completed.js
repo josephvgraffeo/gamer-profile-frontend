@@ -1,11 +1,13 @@
-import { CircularProgress, IconButton } from "@mui/material";
+import { CircularProgress, IconButton, Modal } from "@mui/material";
 import { useEffect, useState } from "react";
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import "../../styles/librarycomponent.css";
+import AddGameToLibrary from "./AddToLibrary";
 
 export default function Completed() {
     const [completedLibrary, setCompletedLibrary] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [formShowing, setFormShowing] = useState(false);
 
     useEffect(() => { getCompletedLibrary() }, [])
 
@@ -17,6 +19,14 @@ export default function Completed() {
                 setIsLoading(false);
             })
             .catch(error => console.error(error))
+    }
+
+    function handleFormShowing() {
+        setFormShowing(true);
+    }
+
+    function handleCloseForm() {
+        setFormShowing(false);
     }
 
     return (
@@ -35,7 +45,7 @@ export default function Completed() {
             ) : (
                 <>
                     <div>
-                        <IconButton><AddCircleOutlineIcon /></IconButton>
+                        <IconButton onClick={handleFormShowing}><AddCircleOutlineIcon /></IconButton>
                         <h1>Completed:</h1>
                         {completedLibrary.map((completedEntry) => (
                             <div key={completedEntry._id}>
@@ -47,6 +57,11 @@ export default function Completed() {
                                 ))}
                             </div>
                         ))}
+                        {formShowing && (
+                                <Modal open={true} onClose={handleCloseForm}>
+                                    <AddGameToLibrary status="completed"/>
+                                </Modal>
+                            )}
                     </div>
                 </>
             )}

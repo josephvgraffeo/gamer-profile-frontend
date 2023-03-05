@@ -1,9 +1,23 @@
 import { Select, MenuItem, Button } from "@mui/material";
 import { useState, useEffect } from "react";
 
-export default function AddGameToLibrary() {
+export default function AddGameToLibrary(props) {
     const [gamesList, setGamesList] = useState([]);
     const [selectedGame, setSelectedGame] = useState("");
+
+    async function handleAddGameToLibrary() {
+        fetch(`https://gamer-profile-project.web.app/gamerLibrary/${props.status}`, {
+            method: 'POST',
+            body: JSON.stringify({ gameId: selectedGame, _id: selectedGame}),
+            headers: { 'Content-Type': 'application/json' }
+        })
+            .then(res => res.json())
+            .then(data => {
+                setGamesList(data);
+                setSelectedGame("");
+            })
+            .catch(error => console.error(error))
+    }
 
     useEffect(() => {
         fetch('https://gamer-profile-project.web.app/games')
@@ -17,11 +31,6 @@ export default function AddGameToLibrary() {
     function handleSetSelectedGame(e) {
         setSelectedGame(e.target.value);
     };
-
-    function handleAddGameToLibrary() {
-        console.log(selectedGame);
-        setSelectedGame("")
-    }
 
     return (
         <>

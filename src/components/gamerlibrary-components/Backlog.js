@@ -1,11 +1,13 @@
-import { CircularProgress, IconButton } from "@mui/material";
+import { CircularProgress, IconButton, Modal } from "@mui/material";
 import { useEffect, useState } from "react";
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import "../../styles/librarycomponent.css";
+import AddGameToLibrary from "./AddToLibrary";
 
 export default function Backlog() {
     const [backlogLibrary, setBacklogLibrary] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [formShowing, setFormShowing] = useState(false);
 
     useEffect(() => { getBacklogLibrary() }, [])
 
@@ -17,6 +19,14 @@ export default function Backlog() {
                 setIsLoading(false);
             })
             .catch(error => console.error(error))
+    }
+
+    function handleFormShowing() {
+        setFormShowing(true);
+    }
+
+    function handleCloseForm() {
+        setFormShowing(false);
     }
 
     return (
@@ -35,7 +45,7 @@ export default function Backlog() {
             ) : (
                 <>
                     <div>
-                        <IconButton><AddCircleOutlineIcon /></IconButton>
+                        <IconButton onClick={handleFormShowing}><AddCircleOutlineIcon /></IconButton>
                         <h1>Backlog:</h1>
                         {backlogLibrary.map((backlogEntry) => (
                             <div key={backlogEntry._id}>
@@ -47,6 +57,11 @@ export default function Backlog() {
                                 ))}
                             </div>
                         ))}
+                        {formShowing && (
+                                <Modal open={true} onClose={handleCloseForm}>
+                                    <AddGameToLibrary status="backlog"/>
+                                </Modal>
+                            )}
                     </div>
                 </>
             )}

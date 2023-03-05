@@ -1,4 +1,4 @@
-import { Button, CircularProgress, IconButton, Modal } from "@mui/material";
+import { CircularProgress, IconButton, Modal } from "@mui/material";
 import { useEffect, useState } from "react";
 import AddGameToLibrary from "./AddToLibrary.js";
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
@@ -59,7 +59,7 @@ export default function Playing() {
                             ))}
                             {formShowing && (
                                 <Modal open={true} onClose={handleCloseForm}>
-                                    <AddGameToLibrary />
+                                    <AddGameToLibrary status="playing" />
                                 </Modal>
                             )}
                         </div>
