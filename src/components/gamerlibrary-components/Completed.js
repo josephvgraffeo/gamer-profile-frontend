@@ -63,7 +63,7 @@ export default function Completed() {
                             ))}
                         </div>
                         {formShowing && (
-                            <Modal open={true} onClose={handleCloseForm}>
+                            <Modal className="form-modal" open={true} onClose={handleCloseForm}>
                                 <AddGameToLibrary status="completed" />
                             </Modal>
                         )}

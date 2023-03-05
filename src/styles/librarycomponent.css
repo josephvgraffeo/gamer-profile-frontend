@@ -11,6 +11,10 @@
     margin-top: 15vh;
 }
 
+.form-modal > .form-inputs {
+    margin-top: 6.5vh;
+}
+
 .library-row {
     display: inline-block;
     flex-wrap: nowrap;

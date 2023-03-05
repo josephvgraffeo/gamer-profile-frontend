@@ -7,12 +7,12 @@ export default function GamerProfile() {
     return (
         <Box className="prof-main-box">
             <Grid className="prof-main-grid" container>
-                <Grid className="prof-card-grid" item xs={12} md={2.75}>
+                <Grid className="prof-card-grid" item xs={12} md={2.85}>
                     <Box className="prof-card-box">
                         <GamerCard />
                     </Box>
                 </Grid>
-                <Grid className="prof-lib-grid" item xs={12} md={9.25}>
+                <Grid className="prof-lib-grid" item xs={12} md={9.15}>
                     <Box className="prof-lib-box">
                         <GamerLibrary />
                     </Box>
