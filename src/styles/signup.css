@@ -1,0 +1,39 @@
+.page-background {
+    background-image: url("https://gamer-profile-img-bucket.s3.amazonaws.com/background-images/background.webp");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form-container {
+    color: #ffffff;
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    padding: 70px 90px;
+    background-color: #ffffff38;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid #ffffff;
+    margin-top: -15vh;
+    backdrop-filter: blur(2px);
+}
+
+.form-title {
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.signup-form-button {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.signup-form-button:hover {
+    background-color: #d6d0d0b2;
+    color: #000000;
+}
+

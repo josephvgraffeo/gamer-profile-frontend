@@ -2,13 +2,12 @@ import { useState } from 'react';
 import { Box, Button, Grid, TextField, Typography } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext.js';
-import "../styles/loginsignup.css"
+import "../styles/login.css"
 
 export default function LoginForm() {
     const { loginUser } = UserAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
 
     const navigate = useNavigate();
 
@@ -17,12 +16,10 @@ export default function LoginForm() {
 
     async function handleSubmit(e) {
         e.preventDefault();
-        setError('')
         try {
             await loginUser(email, password);
             navigate("/gamerprofile");
         } catch (e) {
-            setError(e.message);
             console.log(e.message);
         }
     };
@@ -30,7 +27,7 @@ export default function LoginForm() {
     return (
         <div className="page-background">
             <div className="form-container">
-                <Typography>Login</Typography>
+                <Typography className="form-title">Login</Typography>
                 <form onSubmit={handleSubmit}>
                     <div className="form-main-div">
                         <Grid container spacing={1.5}>
@@ -52,7 +49,7 @@ export default function LoginForm() {
                                 />
                             </Grid>
                             <Grid item xs={12}>
-                                <Button className="signup-form-button" type="submit" variant="contained">
+                                <Button className="login-form-button" type="submit" variant="contained">
                                     Login
                                 </Button>
                                 <p>Don't have an account? <Link to="/signup">Sign up</Link></p>

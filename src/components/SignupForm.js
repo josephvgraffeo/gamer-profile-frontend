@@ -2,12 +2,11 @@ import { useState } from 'react';
 import { Box, Button, Grid, TextField, Typography } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext.js';
-import "../styles/loginsignup.css"
+import "../styles/signup.css"
 
 export default function SignupForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
     const navigate = useNavigate();
     const { createUser } = UserAuth();
 
@@ -16,12 +15,10 @@ export default function SignupForm() {
 
     async function handleSubmit(e) {
         e.preventDefault();
-        setError('')
         try {
             await createUser(email, password);
             navigate("/gamerprofile")
         } catch (e) {
-            setError(e.message);
             console.log(e.message);
         }
     };
@@ -29,7 +26,7 @@ export default function SignupForm() {
     return (
         <div className="page-background">
             <div className="form-container">
-                <Typography>Signup</Typography>
+                <Typography className="form-title">Signup</Typography>
                 <form onSubmit={handleSubmit}>
                     <div className="form-main-div">
                         <Grid container spacing={1.5}>
