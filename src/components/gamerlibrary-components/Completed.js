@@ -47,10 +47,10 @@ export default function Completed() {
                     <div>
                         <IconButton className="add-button" onClick={handleFormShowing}>
                             <Typography className="add-button-text">Add To Completed</Typography>
-                            <AddCircleOutlineIcon className="add-button-icon" />
+                            <AddCircleOutlineIcon className="add-button" />
                         </IconButton>
                         <h1 className="status-text">Completed:</h1>
-                        <div>
+                        <div className="library-container">
                             {completedLibrary.map((completedEntry) => (
                                 <div key={completedEntry._id}>
                                     {completedEntry.games.map((game) => (

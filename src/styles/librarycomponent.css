@@ -1,59 +1,68 @@
 .form-modal {
-    background-color: #87cdffd5;
+    background-color: #dbe2ffd8;
     border: 3px solid #000000;
     border-radius: 10px;
     height: 70vh;
     width: 65vw;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 15vh;
-}
-
-.form-modal > .form-inputs {
-    margin-top: 6.5vh;
+    min-height: 500px;
+    min-width: 400px;
+    margin: auto;
+    top: 50%;
+    padding-top: 5.5vh;
 }
 
 .library-row {
     display: inline-block;
+    white-space: nowrap;
     flex-wrap: nowrap;
     overflow-x: auto;
-    margin-right: 4vw;
-    margin-left: 4vw;
+    -webkit-overflow-scrolling: touch;
+}
+
+.add-button {
+    float: right;
+    color: #30b410;
+    transition: transform .3s ease-in-out;
+}
+
+.add-button:hover {
+    transform: scale(1.1);
+}
+
+.add-button > .add-button-text {
+    margin-right: .25vw;
+    color: #30b410;
+    transition: transform .3s ease-in-out;
+}
+
+.add-button > .add-button-text:hover {
+    transform: scale(1.05);
+    color: #3ee814;
 }
 
 .status-text {
     color: #ffffff;
-    text-align: left;
-    margin-left: 20px;
-    margin-top: -30px;
-    margin-bottom: 30px;
-    font-size: 30px;
+    float: left;
+    font-size: 25px;
+    margin-left: 1.8vw;
+    text-shadow: 4px 0 3px #000000d1;
+    position: absolute;
 }
 
-.add-button>.add-button-text {
-    font-size: 15px;
-    margin-right: 5px;
-    color: #28cd12;
-}
-
-.add-button>.add-button-icon {
-    color: #28cd12;
-    margin-top: .5vh;
-    margin-right: -61vw;
+.library-container {
+    padding-top: 5vh;
 }
 
 .library-image {
-    margin-top: 0px;
-    height: 200px;
+    height: 185px;
     width: 140px;
     outline: 2px solid #000000;
     box-shadow: 5px 0 10px #00000096;
+    margin: 2.3vw;
 }
 
 .library-title {
     color: #ffffff;
     font-size: 15px;
-    margin-top: 20px;
+    margin-top: -2vh;
 }

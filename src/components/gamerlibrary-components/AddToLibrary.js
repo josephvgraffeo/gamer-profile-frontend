@@ -43,8 +43,8 @@ export default function AddGameToLibrary(props) {
 
     async function handleSubmit(e) {
         e.preventDefault();
-        await handleAddGameToLibrary();
-        await handleAddAdditionalEntryInfo();
+        handleAddGameToLibrary();
+        handleAddAdditionalEntryInfo();
     }
 
     useEffect(() => {
@@ -61,7 +61,7 @@ export default function AddGameToLibrary(props) {
     };
 
     return (
-        <>
+        <div className="form-container">
             <div className="form-inputs">
                 <div>
                     <Select displayEmpty value={selectedGame} onChange={handleSetSelectedGame} sx={{ width: "400px" }}>
@@ -78,7 +78,7 @@ export default function AddGameToLibrary(props) {
                     <FormControl onSubmit={handleSubmit} className="form-control">
                         <Rating name="rating" value={rating} precision={0.5} onChange={(e) => setRating(e.target.value)} />
                         <br />
-                        <TextField label="Hours Played" value={hours} onChange={(e) => setHours(e.target.value)} />
+                        <TextField label="Hours Played" value={hours} onChange={(e) => setHours(e.target.value)} style={{ color: "white" }}/>
                         <br />
                         <TextField label="Platform/Console" value={platform} onChange={(e) => setPlatform(e.target.value)} />
                         <br />
@@ -96,6 +96,6 @@ export default function AddGameToLibrary(props) {
                     style={{ backgroundColor: selectedGame ? 'green' : 'gray', color: 'white' }}>Add
                 </Button>
             </div>
-        </>
+        </div>
     )
 }

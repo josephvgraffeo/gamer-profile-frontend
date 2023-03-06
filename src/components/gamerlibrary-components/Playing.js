@@ -45,12 +45,12 @@ export default function Playing() {
                 ) : (
                     <>
                         <div>
-                            <IconButton className="add-button" onClick={handleFormShowing}>
-                                <Typography className="add-button-text">Add To Playing</Typography>
-                                <AddCircleOutlineIcon className="add-button-icon" />
-                            </IconButton>
-                            <h1 className="status-text">Playing:</h1>
-                            <div>
+                                <IconButton className="add-button" onClick={handleFormShowing}>
+                                    <Typography className="add-button-text">Add To Playing</Typography>
+                                    <AddCircleOutlineIcon className="add-button" />
+                                </IconButton>
+                                <h1 className="status-text">Playing:</h1>
+                            <div className="library-container">
                                 {playingLibrary.map((playingEntry) => (
                                     <div key={playingEntry._id} >
                                         {playingEntry.games.map((game) => (

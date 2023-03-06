@@ -47,10 +47,10 @@ export default function Backlog() {
                     <div>
                         <IconButton className="add-button" onClick={handleFormShowing}>
                             <Typography className="add-button-text">Add To Backlog</Typography>
-                            <AddCircleOutlineIcon className="add-button-icon" />
+                            <AddCircleOutlineIcon className="add-button" />
                         </IconButton>
                         <h1 className="status-text">Backlog:</h1>
-                        <div>
+                        <div className="library-container">
                             {backlogLibrary.map((backlogEntry) => (
                                 <div key={backlogEntry._id}>
                                     {backlogEntry.games.map((game) => (
