@@ -31,7 +31,7 @@ export default function GamerLibrary() {
                 />
                 ) : (
                     <Grid className="main-status-container" container>
-                        <Grid className="status-row" container direction="row">
+                        <Grid className="status-row" container direction="row" sx={{ position: "relative" }}>
                             <div className="status-row-playing" container xs={12} sm={6} md={4} lg={3}>
                                 <Playing />
                             </div>
