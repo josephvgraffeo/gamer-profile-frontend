@@ -5,6 +5,10 @@ import "../../styles/librarycomponent.css";
 export default function AddGameToLibrary(props) {
     const [gamesList, setGamesList] = useState([]);
     const [selectedGame, setSelectedGame] = useState("");
+    const [rating, setRating] = useState("");
+    const [hours, setHours] = useState("");
+    const [platform, setPlatform] = useState("");
+    const [comments, setComments] = useState("");
 
     function handleAddGameToLibrary() {
         fetch(`https://gamer-profile-project.web.app/gamerLibrary/${props.status}`, {
@@ -16,12 +20,31 @@ export default function AddGameToLibrary(props) {
             .then(data => {
                 setGamesList(data);
                 setSelectedGame("");
+                return data._id
             })
-            .catch(error => console.error(error))
+            .catch(err => console.error(err))
     }
 
-    function handleAdditionalEntryInfo() {
+    function handleAddAdditionalEntryInfo() {
+        fetch(`https://gamer-profile-project.web.app/entryInfo`, {
+            method: 'POST',
+            body: JSON.stringify({ gameId: selectedGame, rating: rating, hours: hours, platform: platform, comments: comments }),
+            headers: { 'Content-Type': 'application/json' }
+        })
+            .then(res => res.json())
+            .then(data => {
+                setRating("");
+                setHours("");
+                setPlatform("");
+                setComments("");
+            })
+            .catch(err => console.error(err))
+    }
 
+    async function handleSubmit(e) {
+        e.preventDefault();
+        await handleAddGameToLibrary();
+        await handleAddAdditionalEntryInfo();
     }
 
     useEffect(() => {
@@ -52,23 +75,23 @@ export default function AddGameToLibrary(props) {
                 </div>
                 <br />
                 <div>
-                    <FormControl className="form-control">
-                        <Rating name="rating" precision={0.5} />
+                    <FormControl onSubmit={handleSubmit} className="form-control">
+                        <Rating name="rating" value={rating} precision={0.5} onChange={(e) => setRating(e.target.value)} />
                         <br />
-                        <TextField label="Hours Played" />
+                        <TextField label="Hours Played" value={hours} onChange={(e) => setHours(e.target.value)} />
                         <br />
-                        <TextField label="Platform/Console" />
+                        <TextField label="Platform/Console" value={platform} onChange={(e) => setPlatform(e.target.value)} />
                         <br />
-                        <TextField className="comments" label="Comments" multiline rows={6} sx={{
+                        <TextField className="comments" label="Comments" value={comments} multiline rows={6} sx={{
                             width: '500px',
                             '& .MuiOutlinedInput-input': { width: '100%' },
                             '& .MuiOutlinedInput-root': { width: '100%' },
-                        }} />
+                        }} onChange={(e) => setComments(e.target.value)} />
                     </FormControl>
                 </div>
                 <br />
                 <Button
-                    onClick={handleAddGameToLibrary}
+                    onClick={handleSubmit}
                     disabled={!selectedGame}
                     style={{ backgroundColor: selectedGame ? 'green' : 'gray', color: 'white' }}>Add
                 </Button>
