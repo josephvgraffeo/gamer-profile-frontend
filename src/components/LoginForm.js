@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Box, Button, Grid, TextField, Typography } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext.js';
-import "../styles/signupform.css"
+import "../styles/loginsignup.css"
 
 export default function LoginForm() {
     const { loginUser } = UserAuth();
@@ -28,37 +28,39 @@ export default function LoginForm() {
     };
 
     return (
-        <Box className="form-main-box">
-            <Typography>Login</Typography>
-            <form onSubmit={handleSubmit}>
-                <div className="form-main-div">
-                    <Grid container spacing={1.5}>
-                        <Grid item xs={12}>
-                            <TextField
-                                label="Email"
-                                variant="outlined"
-                                value={email}
-                                onChange={handleEmailChange}
-                            />
+        <div className="page-background">
+            <div className="form-container">
+                <Typography>Login</Typography>
+                <form onSubmit={handleSubmit}>
+                    <div className="form-main-div">
+                        <Grid container spacing={1.5}>
+                            <Grid item xs={12}>
+                                <TextField
+                                    label="Email"
+                                    variant="outlined"
+                                    value={email}
+                                    onChange={handleEmailChange}
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <TextField
+                                    label="Password"
+                                    type="password"
+                                    variant="outlined"
+                                    value={password}
+                                    onChange={handlePasswordChange}
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Button className="signup-form-button" type="submit" variant="contained">
+                                    Login
+                                </Button>
+                                <p>Don't have an account? <Link to="/signup">Sign up</Link></p>
+                            </Grid>
                         </Grid>
-                        <Grid item xs={12}>
-                            <TextField
-                                label="Password"
-                                type="password"
-                                variant="outlined"
-                                value={password}
-                                onChange={handlePasswordChange}
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <Button className="signup-form-button" type="submit" variant="contained">
-                                Login
-                            </Button>
-                            <p>Don't have an account? <Link to="/signup">Sign up</Link></p>
-                        </Grid>
-                    </Grid>
-                </div>
-            </form>
-        </Box>
+                    </div>
+                </form>
+            </div>
+        </div>
     );
 };
