@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Button, Grid, TextField, Typography } from '@mui/material';
+import { Button, Grid, TextField, Typography } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext.js';
 import "../styles/login.css"
@@ -54,7 +54,7 @@ export default function LoginForm() {
                                 <Button className="login-form-button" type="submit" variant="contained">
                                     Login
                                 </Button>
-                                <p className="form-footer">Don't have an account? <Link to="/signup"><p style={{ color: "#000000", display: "inline" }}>Sign Up</p></Link></p>
+                                <p className="form-footer">Don't have an account? <Link to="/signup">Sign Up</Link></p>
                             </Grid>
                         </Grid>
                     </div>

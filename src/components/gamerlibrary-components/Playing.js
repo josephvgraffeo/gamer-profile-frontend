@@ -65,7 +65,7 @@ export default function Playing() {
                         </div>
                         {formShowing && (
                             <Modal className="form-modal" open={true} onClose={handleCloseForm}>
-                                <AddGameToLibrary status="playing" />
+                                <AddGameToLibrary status="playing" handleCloseForm={handleCloseForm} />
                             </Modal>
                         )}
                     </div>

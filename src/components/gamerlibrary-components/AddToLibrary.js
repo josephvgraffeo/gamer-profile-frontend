@@ -1,4 +1,5 @@
-import { Select, MenuItem, Button, FormControl, TextField, Rating } from "@mui/material";
+import { Select, MenuItem, Button, FormControl, TextField, Rating, IconButton } from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
 import { useState, useEffect } from "react";
 import "../../styles/librarycomponent.css";
 
@@ -18,8 +19,8 @@ export default function AddGameToLibrary(props) {
         })
             .then(res => res.json())
             .then(data => {
-                setGamesList(data);
-                setSelectedGame("");
+                props.setGamesList(data);
+                props.setSelectedGame("");
                 return data._id
             })
             .catch(err => console.error(err))
@@ -62,6 +63,9 @@ export default function AddGameToLibrary(props) {
 
     return (
         <div className="form-container">
+            <div className="close-components">
+                <p className="close-form-text">Cancel</p><IconButton onClick={props.handleCloseForm}><CloseIcon className="close-form-button" /></IconButton>
+            </div>
             <div className="form-inputs">
                 <Select displayEmpty value={selectedGame} onChange={handleSetSelectedGame} sx={{ width: "400px" }} className="drop-down-menu">
                     <MenuItem value="" disabled>
@@ -80,8 +84,8 @@ export default function AddGameToLibrary(props) {
                         width: '500px',
                         '& .MuiOutlinedInput-input': { width: '100%' },
                         '& .MuiOutlinedInput-root': { width: '100%' },
-                    }} onChange={(e) => setComments(e.target.value)} 
-                    className="text-field" />
+                    }} onChange={(e) => setComments(e.target.value)}
+                        className="text-field" />
                 </FormControl>
                 <br />
                 <Button

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Button, Grid, TextField, Typography } from '@mui/material';
+import { Button, Grid, TextField, Typography } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext.js';
 import "../styles/signup.css"
@@ -26,7 +26,7 @@ export default function SignupForm() {
     return (
         <div className="signup-page-background">
             <div className="signup-form-container">
-                <Typography className="signup-form-title">Signup</Typography>
+                <Typography className="signup-form-title">Sign Up</Typography>
                 <form onSubmit={handleSubmit}>
                     <div className="form-main-div">
                         <Grid container spacing={1.5}>
@@ -53,7 +53,7 @@ export default function SignupForm() {
                                 <Button className="signup-form-button" type="submit" variant="contained">
                                     Sign Up
                                 </Button>
-                                <p className="form-footer">Already have an account? <Link to="/login"><p style={{ color: "#000000", display: "inline" }}>Login</p></Link></p>
+                                <p className="form-footer">Already have an account? <Link to="/login">Login</Link></p>
                             </Grid>
                         </Grid>
                     </div>

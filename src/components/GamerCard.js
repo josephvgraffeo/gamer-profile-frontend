@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import { Button, CircularProgress, IconButton } from "@mui/material";
+import { CircularProgress, IconButton } from "@mui/material";
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
+import DisabledByDefaultIcon from '@mui/icons-material/DisabledByDefault';
 import EditIcon from '@mui/icons-material/Edit';
 import "../styles/gamercard.css";
 
@@ -118,8 +120,8 @@ export default function GamerCard() {
                             </div>
                             {isEditing ? (
                                 <div className="edit-button-group">
-                                    <Button variant="contained" className="save-button" onClick={handleUpdateGamerCard}>Save Changes</Button>
-                                    <Button variant="contained" className="cancel-button" onClick={handleCancel}>Cancel</Button>
+                                    <p className="save-button-text">Save</p><IconButton className="save-button" onClick={handleUpdateGamerCard}><CheckBoxIcon /></IconButton>
+                                    <p className="cancel-button-text">Cancel</p><IconButton className="cancel-button" onClick={handleCancel}><DisabledByDefaultIcon /></IconButton>
                                 </div>
                             ) : (
                                 <p className="edit-card-text"> Edit <IconButton className="icon-button" onClick={handleIsEditing}><EditIcon className="edit-button" /></IconButton></p>

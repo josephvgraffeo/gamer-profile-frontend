@@ -3,10 +3,10 @@
     background-color: #dbe2ffd8;
     border: 3px solid #000000;
     border-radius: 10px;
-    height: 70vh;
-    width: 65vw;
-    min-height: 500px;
-    min-width: 400px;
+    max-height: 600px;
+    max-width: 900px;
+    min-height: 300px;
+    min-width: 500px;
     margin: auto;
     top: 50%;
     padding-top: 5.5vh;
@@ -85,13 +85,14 @@
 }
 
 .form-container .input-button {
-    transition: transform 0.35s ease-in-out;
     box-shadow: 1px 0 8px #0000008a;
     margin-top: 8px;
+    transition: transform 0.35s ease-in-out;
 }
 
 .form-container .input-button:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
+    box-shadow: 1px 0 12px #000000;
 }
 
 .form-container .drop-down-menu {
@@ -104,4 +105,17 @@
 .form-container .drop-down-menu:focus-visible {
     background-color: #ffffffd5;
     transform: scale(1.05);
+}
+
+.close-components .close-form-text {
+    font-family: 'Cairo', sans-serif;
+    font-size: 15px;
+    color: #ee0b0b;
+    display: inline;
+}
+
+.close-components .close-form-button {
+    color: #ee0b0b;
+    display: inline;
+    float: right;
 }
