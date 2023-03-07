@@ -1,0 +1,95 @@
+.welcome-page-background {
+    background-image: url("https://gamer-profile-img-bucket.s3.amazonaws.com/background-images/welcome-page-background.webp");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.welcome-page-container {
+    font-family: 'Cairo', sans-serif;
+    color: #ffffff;
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    padding: 40px 220px;
+    background-color: #a1daeb36;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 3px solid #00000077;
+    margin-top: -8.5vh;
+    backdrop-filter: blur(5.5px);
+    transition: transform 0.35s ease-in-out;
+}
+
+.welcome-page-container:hover {
+    transform: scale(1.025);
+}
+
+.welcome-page-container > h1 {
+    font-family: 'Cairo', sans-serif;
+    color: #66d3e8;
+    font-size: 55px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: 3px 0 8px #000000ab;
+    transition: transform 0.35s ease-in-out;
+}
+
+.welcome-page-container > h1:hover {
+    transform: scale(1.1);
+    text-shadow: 3px 0 20px #000000d8;
+}
+
+.welcome-page-container > h3 {
+    font-family: 'Cairo', sans-serif;
+    color: #6ce7ff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: 3px 0 10px #000000ab;
+    transition: transform 0.35s ease-in-out;
+}
+
+.welcome-page-container > h3:hover {
+    transform: scale(1.1);
+    text-shadow: 3px 0 20px #000000ce;
+}
+
+.welcome-page-container .form-footer {
+    color: #ffffff;
+    transition: transform .35s ease-in-out;
+}
+
+.welcome-page-container .form-footer:hover {
+    transform: scale(1.1);
+}
+
+.welcome-page-container .text-field {
+    background-color: #ffffffae;
+    border-radius: 5px;
+    box-shadow: 2px 0 10px #ffffff6c;
+    transition: transform .35s ease-in-out;
+}
+
+.welcome-page-container .text-field:hover,
+.welcome-page-container .text-field:focus-within {
+    background-color: #ffffff;
+    transform: scale(1.05);
+}
+
+.welcome-page-container .welcome-page-button {
+    font-family: 'Cairo', sans-serif;
+    margin-top: 10px;
+    background-color: #8ee8ff;
+    color: #000000;
+    box-shadow: 2px 0 10px #757474;
+    transition: transform .3s ease-in-out;
+}
+
+.welcome-page-container .welcome-page-button:hover {
+    background-color: #00f2ff;
+    color: #000000;
+    transform: scale(1.15);
+}

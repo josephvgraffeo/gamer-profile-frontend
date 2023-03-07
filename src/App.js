@@ -6,7 +6,7 @@ import Login from './scenes/Login.js';
 import GamerProfile from './scenes/GamerProfile.js';
 import AccountPage from './scenes/AccountPage.js';
 import ProtectedRoute from './components/ProtectedRoutes.js';
-import WelcomePage from './scenes/Welcome.js';
+import Welcome from './scenes/Welcome.js';
 import ContactPage from './scenes/ContactPage.js';
 import './styles/App.css';
 
@@ -16,7 +16,7 @@ function App() {
       <AuthContextProvider>
         <Navbar />
         <Routes>
-          <Route path='/' element={<WelcomePage />} />
+          <Route path='/' element={<Welcome />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/login' element={<Login />} />
           <Route path='/contact' element={<ContactPage />} />
