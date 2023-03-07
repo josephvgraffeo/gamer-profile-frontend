@@ -24,9 +24,9 @@ export default function SignupForm() {
     };
 
     return (
-        <div className="page-background">
-            <div className="form-container">
-                <Typography className="form-title">Signup</Typography>
+        <div className="signup-page-background">
+            <div className="signup-form-container">
+                <Typography className="signup-form-title">Signup</Typography>
                 <form onSubmit={handleSubmit}>
                     <div className="form-main-div">
                         <Grid container spacing={1.5}>
@@ -35,6 +35,7 @@ export default function SignupForm() {
                                     label="Email"
                                     variant="outlined"
                                     value={email}
+                                    className="text-field"
                                     onChange={handleEmailChange}
                                 />
                             </Grid>
@@ -44,6 +45,7 @@ export default function SignupForm() {
                                     type="password"
                                     variant="outlined"
                                     value={password}
+                                    className="text-field"
                                     onChange={handlePasswordChange}
                                 />
                             </Grid>
@@ -51,7 +53,7 @@ export default function SignupForm() {
                                 <Button className="signup-form-button" type="submit" variant="contained">
                                     Sign Up
                                 </Button>
-                                <p>Already have an account? <Link to="/login">Login</Link></p>
+                                <p className="form-footer">Already have an account? <Link to="/login"><p style={{ color: "#000000", display: "inline" }}>Login</p></Link></p>
                             </Grid>
                         </Grid>
                     </div>

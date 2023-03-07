@@ -25,17 +25,18 @@ export default function LoginForm() {
     };
 
     return (
-        <div className="page-background">
-            <div className="form-container">
-                <Typography className="form-title">Login</Typography>
+        <div className="login-page-background">
+            <div className="login-form-container">
+                <Typography className="login-form-title">Login</Typography>
                 <form onSubmit={handleSubmit}>
-                    <div className="form-main-div">
+                    <div className="login-form-main-div">
                         <Grid container spacing={1.5}>
                             <Grid item xs={12}>
                                 <TextField
                                     label="Email"
                                     variant="outlined"
                                     value={email}
+                                    className="text-field"
                                     onChange={handleEmailChange}
                                 />
                             </Grid>
@@ -45,6 +46,7 @@ export default function LoginForm() {
                                     type="password"
                                     variant="outlined"
                                     value={password}
+                                    className="text-field"
                                     onChange={handlePasswordChange}
                                 />
                             </Grid>
@@ -52,7 +54,7 @@ export default function LoginForm() {
                                 <Button className="login-form-button" type="submit" variant="contained">
                                     Login
                                 </Button>
-                                <p>Don't have an account? <Link to="/signup">Sign up</Link></p>
+                                <p className="form-footer">Don't have an account? <Link to="/signup"><p style={{ color: "#000000", display: "inline" }}>Sign Up</p></Link></p>
                             </Grid>
                         </Grid>
                     </div>
