@@ -1,5 +1,5 @@
 .login-page-background {
-    background-image: url("https://gamer-profile-img-bucket.s3.amazonaws.com/background-images/background.webp");
+    background-image: url("https://gamer-profile-img-bucket.s3.amazonaws.com/background-images/login-background.webp");
     background-size: cover;
     display: flex;
     align-items: center;
@@ -14,7 +14,7 @@
     width: 90%;
     max-width: 400px;
     padding: 90px 150px;
-    background-color: #ff43e91b;
+    background-color: #3380f21b;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border: 3px solid #00000077;
