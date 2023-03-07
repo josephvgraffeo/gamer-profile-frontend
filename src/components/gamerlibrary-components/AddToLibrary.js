@@ -63,37 +63,32 @@ export default function AddGameToLibrary(props) {
     return (
         <div className="form-container">
             <div className="form-inputs">
-                <div>
-                    <Select displayEmpty value={selectedGame} onChange={handleSetSelectedGame} sx={{ width: "400px" }}>
-                        <MenuItem value="" disabled>
-                            <em>Select Game</em>
-                        </MenuItem>
-                        {gamesList.map(game => (
-                            <MenuItem key={game._id} value={game._id}>{game.title}</MenuItem>
-                        ))}
-                    </Select>
-                </div>
+                <Select displayEmpty value={selectedGame} onChange={handleSetSelectedGame} sx={{ width: "400px" }} className="drop-down-menu">
+                    <MenuItem value="" disabled>
+                        <em>Select Game</em>
+                    </MenuItem>
+                    {gamesList.map(game => (
+                        <MenuItem key={game._id} value={game._id}>{game.title}</MenuItem>
+                    ))}
+                </Select>
                 <br />
-                <div>
-                    <FormControl onSubmit={handleSubmit} className="form-control">
-                        <Rating name="rating" value={rating} precision={0.5} onChange={(e) => setRating(e.target.value)} />
-                        <br />
-                        <TextField label="Hours Played" value={hours} onChange={(e) => setHours(e.target.value)} style={{ color: "white" }}/>
-                        <br />
-                        <TextField label="Platform/Console" value={platform} onChange={(e) => setPlatform(e.target.value)} />
-                        <br />
-                        <TextField className="comments" label="Comments" value={comments} multiline rows={6} sx={{
-                            width: '500px',
-                            '& .MuiOutlinedInput-input': { width: '100%' },
-                            '& .MuiOutlinedInput-root': { width: '100%' },
-                        }} onChange={(e) => setComments(e.target.value)} />
-                    </FormControl>
-                </div>
+                <FormControl onSubmit={handleSubmit} className="form-control">
+                    <Rating name="rating" value={rating} precision={0.5} onChange={(e) => setRating(e.target.value)} />
+                    <TextField label="Hours Played" value={hours} onChange={(e) => setHours(e.target.value)} className="text-field" />
+                    <TextField label="Platform/Console" value={platform} onChange={(e) => setPlatform(e.target.value)} className="text-field" />
+                    <TextField label="Comments" value={comments} multiline rows={6} sx={{
+                        width: '500px',
+                        '& .MuiOutlinedInput-input': { width: '100%' },
+                        '& .MuiOutlinedInput-root': { width: '100%' },
+                    }} onChange={(e) => setComments(e.target.value)} 
+                    className="text-field" />
+                </FormControl>
                 <br />
                 <Button
                     onClick={handleSubmit}
                     disabled={!selectedGame}
-                    style={{ backgroundColor: selectedGame ? 'green' : 'gray', color: 'white' }}>Add
+                    style={{ backgroundColor: selectedGame ? 'green' : 'gray', color: 'white' }}
+                    className="input-button">Add
                 </Button>
             </div>
         </div>

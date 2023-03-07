@@ -8,8 +8,8 @@
 }
 
 .navbar .navbar-header {
-    font-weight: 600;
     font-family: 'Cairo', sans-serif;
+    font-weight: 600;
 }
 
 .navbar .navbar-box {
@@ -18,14 +18,15 @@
 }
 
 .navbar .navbar-button {
+    font-family: 'Cairo', sans-serif;
     color: white;
     padding: 15px;
     margin: 5px;
     font-size: 16px;
-    font-family: 'Cairo', sans-serif;
     transition: transform .3s ease-in-out;
 }
 
 .navbar .navbar-button:hover {
     background-color: #3273dcc5;
+    transform: scale(1.05);
 }

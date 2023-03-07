@@ -1,4 +1,5 @@
 .form-modal {
+    font-family: 'Cairo', sans-serif;
     background-color: #dbe2ffd8;
     border: 3px solid #000000;
     border-radius: 10px;
@@ -20,31 +21,36 @@
 }
 
 .add-button {
+    font-family: 'Cairo', sans-serif;
     float: right;
     color: #30b410;
     transition: transform .3s ease-in-out;
+    position: relative;
 }
 
 .add-button:hover {
     transform: scale(1.1);
 }
 
-.add-button > .add-button-text {
+.add-button .add-button-text {
+    font-family: 'Cairo', sans-serif;
     margin-right: .25vw;
     color: #30b410;
     transition: transform .3s ease-in-out;
 }
 
-.add-button > .add-button-text:hover {
+.add-button .add-button-text:hover {
     transform: scale(1.05);
     color: #3ee814;
 }
 
 .status-text {
+    font-family: 'Cairo', sans-serif;
     color: #ffffff;
     float: left;
     font-size: 25px;
     margin-left: 1.8vw;
+    margin-top: 1px;
     text-shadow: 4px 0 3px #000000d1;
     position: absolute;
 }
@@ -58,7 +64,44 @@
 }
 
 .library-title {
+    font-family: 'Cairo', sans-serif;
     color: #ffffff;
-    font-size: 15px;
-    margin-top: -2vh;
+    font-size: 18px;
+    margin-top: -22px;
+}
+
+.form-container .text-field {
+    background-color: #ffffff70;
+    border-radius: 5px;
+    transition: transform 0.35s ease-in-out;
+    margin: 15px;
+}
+
+.form-container .text-field:hover,
+.form-container .text-field:focus-visible {
+    background-color: #ffffffd5;
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+.form-container .input-button {
+    transition: transform 0.35s ease-in-out;
+    box-shadow: 1px 0 8px #0000008a;
+    margin-top: 8px;
+}
+
+.form-container .input-button:hover {
+    transform: scale(1.05);
+}
+
+.form-container .drop-down-menu {
+    background-color: #ffffff70;
+    transition: transform 0.35s ease-in-out;
+    margin-bottom: 15px;
+}
+
+.form-container .drop-down-menu:hover,
+.form-container .drop-down-menu:focus-visible {
+    background-color: #ffffffd5;
+    transform: scale(1.05);
 }

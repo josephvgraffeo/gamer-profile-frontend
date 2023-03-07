@@ -31,8 +31,8 @@ export default function Completed() {
 
     return (
         <>
-            {isLoading ? (
-                <CircularProgress
+            {isLoading
+                ? (<CircularProgress
                     color="secondary"
                     size={100}
                     style={{
@@ -42,14 +42,15 @@ export default function Completed() {
                         transform: "translate(-50%, -50%)",
                     }}
                 />
-            ) : (
-                <>
+                ) : (
                     <div>
-                        <IconButton className="add-button" onClick={handleFormShowing}>
-                            <Typography className="add-button-text">Add To Completed</Typography>
-                            <AddCircleOutlineIcon className="add-button" />
-                        </IconButton>
-                        <h1 className="status-text">Completed:</h1>
+                        <div style={{ paddingBottom: 40 }}>
+                            <IconButton className="add-button" onClick={handleFormShowing}>
+                                <Typography className="add-button-text">Add To Completed</Typography>
+                                <AddCircleOutlineIcon className="add-button" />
+                            </IconButton>
+                            <h1 className="status-text">Completed:</h1>
+                        </div>
                         <div className="library-container">
                             {completedLibrary.map((completedEntry) => (
                                 <div key={completedEntry._id}>
@@ -68,8 +69,7 @@ export default function Completed() {
                             </Modal>
                         )}
                     </div>
-                </>
-            )}
+                )}
         </>
     )
 }

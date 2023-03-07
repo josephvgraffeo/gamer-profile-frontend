@@ -43,32 +43,32 @@ export default function Playing() {
                     }}
                 />
                 ) : (
-                    <>
-                        <div>
-                                <IconButton className="add-button" onClick={handleFormShowing}>
-                                    <Typography className="add-button-text">Add To Playing</Typography>
-                                    <AddCircleOutlineIcon className="add-button" />
-                                </IconButton>
-                                <h1 className="status-text">Playing:</h1>
-                            <div className="library-container">
-                                {playingLibrary.map((playingEntry) => (
-                                    <div key={playingEntry._id} >
-                                        {playingEntry.games.map((game) => (
-                                            <div key={game.title} className="library-row">
-                                                <img className="library-image" src={game.cover_image} alt={game.title} />
-                                                <h4 className="library-title">{game.title}</h4>
-                                            </div>
-                                        ))}
-                                    </div>
-                                ))}
-                            </div>
-                            {formShowing && (
-                                <Modal className="form-modal" open={true} onClose={handleCloseForm}>
-                                    <AddGameToLibrary status="playing" />
-                                </Modal>
-                            )}
+                    <div>
+                        <div style={{ paddingBottom: 40 }}>
+                            <IconButton className="add-button" onClick={handleFormShowing}>
+                                <Typography className="add-button-text">Add To Playing</Typography>
+                                <AddCircleOutlineIcon className="add-button" />
+                            </IconButton>
+                            <h1 className="status-text">Playing:</h1>
                         </div>
-                    </>
+                        <div className="library-container">
+                            {playingLibrary.map((playingEntry) => (
+                                <div key={playingEntry._id} >
+                                    {playingEntry.games.map((game) => (
+                                        <div key={game.title} className="library-row">
+                                            <img className="library-image" src={game.cover_image} alt={game.title} />
+                                            <h4 className="library-title">{game.title}</h4>
+                                        </div>
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
+                        {formShowing && (
+                            <Modal className="form-modal" open={true} onClose={handleCloseForm}>
+                                <AddGameToLibrary status="playing" />
+                            </Modal>
+                        )}
+                    </div>
                 )}
         </>
     )

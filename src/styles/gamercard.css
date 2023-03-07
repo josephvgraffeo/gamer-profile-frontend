@@ -10,10 +10,11 @@ div {
     margin: 12px;
     border: 2px solid #ff007b;
     box-shadow: 5px 0 10px #0000005f;
-    padding: px;
+    padding: 3px;
 }
 
-.card-section-div > h1, h2, h3, h4, h5 {
+.card-section-div h1, h2, h3, h4, h5 {
+    font-family: 'Cairo', sans-serif;
     color: #ffffff;
 }
 
@@ -27,13 +28,14 @@ div {
     box-shadow: 5px 0 15px #0000005f;
 }
 
-div > .edit-card-text {
+.edit-card-text {
+    font-family: 'Cairo', sans-serif;
     color: #ffffff;
     text-align: right;
     margin-top: -12px;
 }
 
-div > .edit-card-text > .icon-button > .edit-button {
+.edit-card-text .icon-button .edit-button {
     color: #ffffff;
     text-align: right;
 }

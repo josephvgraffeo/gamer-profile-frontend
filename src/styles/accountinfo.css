@@ -1,0 +1,19 @@
+h1, h2, p {
+    font-family: 'Cairo', sans-serif;
+    color: #000000;
+}
+
+.return-button {
+    font-family: 'Cairo', sans-serif;
+    background-color: #00000093;
+    color: #ffffff;
+    transition: transform 0.35s ease-in-out;
+    box-shadow: 2px 0 8px #000000;
+}
+
+.return-button:hover {
+    font-family: 'Cairo', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    transform: scale(1.1);
+}
