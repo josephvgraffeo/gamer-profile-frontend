@@ -10,6 +10,7 @@
     background-color: #11119258;
     display: block;
     height: 40vh;
+    border-radius: 5px;
     box-shadow: 5px 5px 10px #00000095;
     overflow-x: scroll;
     white-space: nowrap;
@@ -19,6 +20,7 @@
     background-color: #11119258;
     display: block;
     height: 40vh;
+    border-radius: 5px;
     box-shadow: 5px 5px 10px #00000095;
     overflow-x: scroll;
     white-space: nowrap;
@@ -28,6 +30,7 @@
     background-color: #11119258;
     display: block;
     height: 40vh;
+    border-radius: 5px;
     box-shadow: 5px 5px 10px #00000095;
     overflow-x: scroll;
     white-space: nowrap;

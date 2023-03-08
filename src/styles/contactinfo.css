@@ -34,7 +34,7 @@ h1, h2, p {
 
 .contact-about-container > h1 {
     font-family: 'Cairo', sans-serif;
-    color: #46ecd3;
+    color: #ff853e;
     font-size: 42px;
     font-weight: 600;
     margin-bottom: -10px;
@@ -45,6 +45,36 @@ h1, h2, p {
 .contact-about-container > h1:hover {
     transform: scale(1.1);
     text-shadow: 3px 0 20px #000000ce;
+}
+
+.contact-about-container > p {
+    font-family: 'Cairo', sans-serif;
+    color: #f5a448;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: 3px 0 10px #000000ab;
+    transition: transform 0.35s ease-in-out;
+}
+
+.contact-about-container > p:hover {
+    transform: scale(1.1);
+    text-shadow: 3px 0 18px #000000ed;
+}
+
+.contact-about-container h2 {
+    font-family: 'Cairo', sans-serif;
+    color: #ff9d56;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: 3px 0 12px #000000;
+    transition: transform 0.35s ease-in-out;
+}
+
+.contact-about-container h2:hover {
+    transform: scale(1.1);
+    text-shadow: 3px 0 20px #000000f0;
 }
 
 .contact-about-container .form-footer {
@@ -72,14 +102,14 @@ h1, h2, p {
 .contact-about-container .contact-about-button {
     font-family: 'Cairo', sans-serif;
     margin-top: 10px;
-    background-color: #3fd5be;
+    background-color: #f5a448;
     color: #000000;
     box-shadow: 2px 0 10px #000000bc;
     transition: transform .3s ease-in-out;
 }
 
 .contact-about-container .contact-about-button:hover {
-    background-color: #1bf0d0;
+    background-color: #ff7300;
     color: #000000;
     box-shadow: 2px 0 15px #000000db;
     transform: scale(1.15);

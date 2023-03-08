@@ -34,12 +34,12 @@
     font-weight: 600;
     margin-bottom: 20px;
     text-shadow: 3px 0 8px #000000ab;
-    transition: transform 0.35s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .welcome-page-container > h1:hover {
     transform: scale(1.1);
-    text-shadow: 3px 0 20px #000000d8;
+    text-shadow: 3px 0 15px #000000d8;
 }
 
 .welcome-page-container > h3 {
@@ -82,14 +82,15 @@
 .welcome-page-container .welcome-page-button {
     font-family: 'Cairo', sans-serif;
     margin-top: 10px;
-    background-color: #8ee8ff;
+    background-color: #aee7ecdf;
     color: #000000;
-    box-shadow: 2px 0 10px #757474;
+    box-shadow: 2px 0 12px #515050;
     transition: transform .3s ease-in-out;
 }
 
 .welcome-page-container .welcome-page-button:hover {
-    background-color: #00f2ff;
+    background-color: #74e8f3;
     color: #000000;
+    box-shadow: 2px 0 15px #3a3939;
     transform: scale(1.15);
 }
