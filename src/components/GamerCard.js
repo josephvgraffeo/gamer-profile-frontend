@@ -24,7 +24,7 @@ export default function GamerCard() {
                 setGamerCard(data);
                 setIsLoading(false);
             })
-            .catch(error => console.error(error))
+            .catch(err => console.error(err))
     }
 
     function handleIsEditing() {
@@ -49,13 +49,13 @@ export default function GamerCard() {
                 setIsEditing(false);
                 setGamerCard(data);
             })
-            .catch(error => console.error(error))
+            .catch(err => console.error(err))
     }
 
     function handleChangedData(e) {
         e.preventDefault();
         const { name, value } = e.target;
-        setEditedGamerCard(previousData => ({ ...previousData, [name]: value }));
+        setEditedGamerCard(initialObject => ({ ...initialObject, [name]: value }));
     }
 
     return (
@@ -74,7 +74,7 @@ export default function GamerCard() {
             ) : (
                 <div>
                     {gamerCard.map((gamerCard) => (
-                        <div key={gamerCard.username}>
+                        <div key={gamerCard._id}>
                             <img
                                 className="card-image"
                                 src={gamerCard.profile_pic}
@@ -112,8 +112,7 @@ export default function GamerCard() {
                                 {Object.keys(gamerCard.gamertags).map((tag) => (
                                     <div key={tag}>
                                         <h4 tag={tag}>
-                                            {capitalizeFirstLetter(tag)} - {" "}
-                                            {gamerCard.gamertags[tag]}
+                                            {capitalizeFirstLetter(tag)} - {gamerCard.gamertags[tag]}
                                         </h4>
                                     </div>
                                 ))}
