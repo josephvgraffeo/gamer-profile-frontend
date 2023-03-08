@@ -1,8 +1,11 @@
 .prof-main-box {
+    background-image: url("../../public/assets/images/library-background-image.webp");
+    background-position: fill;
     height: 100vh;
     width: 100vw;
     max-width: 100%;
     overflow: hidden;
+
 }
 
 .prof-main-box > .prof-main-grid {
@@ -11,15 +14,14 @@
 }
 
 .prof-main-box > .prof-main-grid > .prof-card-grid {
-    background-color: #17236eee;
+    background-color: #1111923f;
     height: 100%;
     width: 100%;
-    box-shadow: 5px 0 10px #000000cd;
+    box-shadow: 5px 0px 20px #ea075e7c;
     overflow: auto;
 }
 
 .prof-main-box > .prof-main-grid > .prof-lib-grid {
-    background-color: #3d4ba3dd;
     height: 100%;
     width: 100%;
     overflow-x: auto;

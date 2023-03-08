@@ -5,10 +5,10 @@ div {
 
 .card-section-div {
     text-align: center;
-    background-color: #728cff64;
+    background-color: #18064d4d;
     border-radius: 7px;
     margin: 12px;
-    border: 2px solid #ff007b;
+    border: 2px solid #ff0062;
     box-shadow: 5px 0 10px #0000005f;
     padding: 3px;
 }
@@ -24,7 +24,7 @@ div {
     height: 220px;
     width: 220px;
     align-content: center;
-    border: 5px solid #ff007b;
+    border: 5px solid #ff0062;
     box-shadow: 5px 0 15px #0000005f;
 }
 

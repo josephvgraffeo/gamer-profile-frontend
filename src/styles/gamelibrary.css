@@ -7,31 +7,34 @@
 }
 
 .main-status-container > .status-row > .status-row-playing {
-    background-color: #11119258;
+    background-color: #1111923f;
     display: block;
     height: 40vh;
     border-radius: 5px;
-    box-shadow: 5px 5px 10px #00000095;
+    box-shadow: 5px 0px 30px #ea075ed8;
     overflow-x: scroll;
     white-space: nowrap;
+    backdrop-filter: blur(5px);
 }
 
 .main-status-container > .status-row > .status-row-completed {
-    background-color: #11119258;
+    background-color: #1111923f;
     display: block;
     height: 40vh;
     border-radius: 5px;
-    box-shadow: 5px 5px 10px #00000095;
+    box-shadow: 5px 0px 30px #ea075e93;
     overflow-x: scroll;
     white-space: nowrap;
+    backdrop-filter: blur(5px);
 }
 
 .main-status-container > .status-row > .status-row-backlog {
-    background-color: #11119258;
+    background-color: #1111923f;
     display: block;
     height: 40vh;
     border-radius: 5px;
-    box-shadow: 5px 5px 10px #00000095;
+    box-shadow: 5px 0px 30px #ea075e91;
     overflow-x: scroll;
     white-space: nowrap;
+    backdrop-filter: blur(20px);
 }

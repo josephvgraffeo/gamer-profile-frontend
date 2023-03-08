@@ -3,13 +3,14 @@
 }
 
 .navbar .navbar-toolbar {
-    background-color: #202864e6;
+    background-color: #09022ae6;
     box-shadow: 3px 0 12px #000000a0;
 }
 
 .navbar .navbar-header {
     font-family: 'Cairo', sans-serif;
     font-weight: 600;
+    padding-left: 10px;
 }
 
 .navbar .navbar-box {
@@ -27,6 +28,6 @@
 }
 
 .navbar .navbar-button:hover {
-    background-color: #3273dcc5;
+    background-color: #3514bbc5;
     transform: scale(1.05);
 }

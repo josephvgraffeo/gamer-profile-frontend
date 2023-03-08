@@ -22,13 +22,22 @@
 
 .add-button {
     font-family: 'Cairo', sans-serif;
-    float: right;
     color: #30b410;
     transition: transform .3s ease-in-out;
-    position: relative;
 }
 
 .add-button:hover {
+    transform: scale(1.1);
+}
+
+.add-button-icon {
+    font-family: 'Cairo', sans-serif;
+    float: right;
+    color: #30b410;
+    transition: transform .3s ease-in-out;
+}
+
+.add-button-icon:hover {
     transform: scale(1.1);
 }
 

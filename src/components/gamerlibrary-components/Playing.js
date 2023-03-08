@@ -44,12 +44,13 @@ export default function Playing() {
                 />
                 ) : (
                     <div>
-                        <div style={{ paddingBottom: 40 }}>
-                            <IconButton className="add-button" onClick={handleFormShowing}>
-                                <Typography className="add-button-text">Add To Playing</Typography>
-                                <AddCircleOutlineIcon className="add-button" />
-                            </IconButton>
-                            <h1 className="status-text">Playing:</h1>
+                        <div style={{ paddingBottom: 32 }}>
+                            <h1 className="status-text">Playing:
+                                <IconButton className="add-button" onClick={handleFormShowing}>
+                                    <Typography className="add-button-text">Add</Typography>
+                                    <AddCircleOutlineIcon className="add-button-icon" />
+                                </IconButton>
+                            </h1>
                         </div>
                         <div className="library-container">
                             {playingLibrary.map((playingEntry) => (

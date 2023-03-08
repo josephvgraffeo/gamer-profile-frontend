@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Grid, CircularProgress } from "@mui/material";
-import "../styles/gamelibrary.css"
 import Playing from "./gamerlibrary-components/Playing.js";
 import Completed from "./gamerlibrary-components/Completed.js";
 import Backlog from "./gamerlibrary-components/Backlog.js";
+import "../styles/gamelibrary.css"
 
 export default function GamerLibrary() {
     const [games, setGames] = useState([]);
