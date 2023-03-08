@@ -19,8 +19,10 @@ export default function AddGameToLibrary(props) {
         })
             .then(res => res.json())
             .then(data => {
-                props.setGamesList(data);
-                props.setSelectedGame("");
+                setSelectedGame("");
+                props.getPlayingLibrary();
+                props.getCompletedLibrary();
+                props.getBacklogLibrary();
                 return data._id
             })
             .catch(err => console.error(err))
@@ -38,6 +40,9 @@ export default function AddGameToLibrary(props) {
                 setHours("");
                 setPlatform("");
                 setComments("");
+                props.getPlayingLibrary();
+                props.getCompletedLibrary();
+                props.getBacklogLibrary();
             })
             .catch(err => console.error(err))
     }
@@ -45,7 +50,7 @@ export default function AddGameToLibrary(props) {
     async function handleSubmit(e) {
         e.preventDefault();
         handleAddGameToLibrary();
-        handleAddAdditionalEntryInfo();
+        handleAddAdditionalEntryInfo()
     }
 
     useEffect(() => {

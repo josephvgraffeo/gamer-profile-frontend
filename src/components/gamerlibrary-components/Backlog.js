@@ -65,7 +65,7 @@ export default function Backlog() {
                     </div>
                     {formShowing && (
                         <Modal className="form-modal" open={true} onClose={handleCloseForm}>
-                            <AddGameToLibrary status="backlog" />
+                            <AddGameToLibrary status="backlog" getBacklogLibrary={getBacklogLibrary} />
                         </Modal>
                     )}
                 </div>
