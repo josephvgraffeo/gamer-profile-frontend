@@ -9,7 +9,7 @@
 .main-status-container > .status-row > .status-row-playing {
     background-color: #1111923f;
     display: block;
-    height: 40vh;
+    height: 43vh;
     border-radius: 5px;
     box-shadow: 5px 0px 30px #ea075ed8;
     overflow-x: scroll;
@@ -20,7 +20,7 @@
 .main-status-container > .status-row > .status-row-completed {
     background-color: #1111923f;
     display: block;
-    height: 40vh;
+    height: 43vh;
     border-radius: 5px;
     box-shadow: 5px 0px 30px #ea075e93;
     overflow-x: scroll;
@@ -31,7 +31,7 @@
 .main-status-container > .status-row > .status-row-backlog {
     background-color: #1111923f;
     display: block;
-    height: 40vh;
+    height: 43vh;
     border-radius: 5px;
     box-shadow: 5px 0px 30px #ea075e91;
     overflow-x: scroll;

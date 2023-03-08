@@ -13,12 +13,13 @@
     position: relative;
     width: 90%;
     max-width: 400px;
-    padding: 40px 220px;
+    padding: 10px 220px;
+    padding-bottom: 10px;
     background-color: #a1daeb36;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border: 3px solid #00000077;
-    margin-top: -8.5vh;
+    margin-top: -0vh;
     backdrop-filter: blur(5.5px);
     transition: transform 0.35s ease-in-out;
 }
@@ -32,7 +33,7 @@
     color: #66d3e8;
     font-size: 55px;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-shadow: 3px 0 8px #000000ab;
     transition: transform 0.5s ease-in-out;
 }
