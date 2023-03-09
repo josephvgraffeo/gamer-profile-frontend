@@ -1,6 +1,7 @@
 import { CircularProgress, IconButton, Modal, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import "../../styles/librarycomponent.css";
 import AddGameToLibrary from "./AddToLibrary";
 
@@ -58,7 +59,7 @@ export default function Completed() {
                                     {completedEntry.games.map((game) => (
                                         <div key={game.title} className="library-row">
                                             <img className="library-image" src={game.cover_image} alt={game.title} />
-                                            <h4 className="library-title">{game.title}</h4>
+                                            <h4 className="library-title">{game.title}</h4><IconButton sx={{ fontSize: "small", color: "red" }}><HighlightOffIcon /></IconButton>
                                         </div>
                                     ))}
                                 </div>
