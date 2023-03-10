@@ -1,9 +1,9 @@
 import { CircularProgress, IconButton, Modal, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
+import AddGameToLibrary from "./AddToLibrary";
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import "../../styles/librarycomponent.css";
-import AddGameToLibrary from "./AddToLibrary";
 
 export default function Completed() {
     const [completedLibrary, setCompletedLibrary] = useState([]);
@@ -20,6 +20,20 @@ export default function Completed() {
                 setIsLoading(false);
             })
             .catch(error => console.error(error))
+    }
+
+    function removeFromCompletedLibrary(gameId) {
+        fetch(`https://gamer-profile-project.web.app/gamerlibrary/completed/${gameId}`, {
+            method: 'PATCH',
+            body: JSON.stringify({ gameId: gameId }),
+            headers: { 'Content-Type': 'application/json' }
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log("Game removed:", data);
+                getCompletedLibrary();
+            })
+            .catch(err => console.error(err));
     }
 
     function handleFormShowing() {
@@ -59,7 +73,7 @@ export default function Completed() {
                                     {completedEntry.games.map((game) => (
                                         <div key={game.title} className="library-row">
                                             <img className="library-image" src={game.cover_image} alt={game.title} />
-                                            <h4 className="library-title">{game.title}</h4><IconButton sx={{ fontSize: "small", color: "red" }} className="delete-button"><HighlightOffIcon /></IconButton>
+                                            <h4 className="library-title">{game.title} <IconButton onClick={() => removeFromCompletedLibrary(game._id)}><HighlightOffIcon sx={{ color: "red" }} /></IconButton></h4>
                                         </div>
                                     ))}
                                 </div>

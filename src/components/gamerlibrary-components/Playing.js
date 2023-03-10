@@ -22,6 +22,20 @@ export default function Playing() {
             .catch(err => console.error(err))
     }
 
+    function removeFromPlayingLibrary(gameId) {
+        fetch(`https://gamer-profile-project.web.app/gamerlibrary/playing/${gameId}`, {
+            method: 'PATCH',
+            body: JSON.stringify({ gameId: gameId }),
+            headers: { 'Content-Type': 'application/json' }
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log("Game removed:", data);
+                getPlayingLibrary();
+            })
+            .catch(err => console.error(err));
+    }
+
     function handleFormShowing() {
         setFormShowing(true);
     }
@@ -55,11 +69,11 @@ export default function Playing() {
                         </div>
                         <div className="library-container">
                             {playingLibrary.map((playingEntry) => (
-                                <div key={playingEntry._id} >
+                                <div key={playingEntry._id}>
                                     {playingEntry.games.map((game) => (
                                         <div key={game.title} className="library-row">
                                             <img className="library-image" src={game.cover_image} alt={game.title} />
-                                            <h4 className="library-title">{game.title}</h4><IconButton sx={{ fontSize: "small", color: "red" }}><HighlightOffIcon className="delete-button" /></IconButton>
+                                            <h4 className="library-title">{game.title} <IconButton onClick={() => removeFromPlayingLibrary(game._id)}><HighlightOffIcon sx={{ color: "red" }}/></IconButton></h4>
                                         </div>
                                     ))}
                                 </div>

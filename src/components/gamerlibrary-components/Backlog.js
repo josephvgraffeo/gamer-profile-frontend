@@ -1,9 +1,9 @@
 import { CircularProgress, IconButton, Modal, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
+import AddGameToLibrary from "./AddToLibrary";
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import "../../styles/librarycomponent.css";
-import AddGameToLibrary from "./AddToLibrary";
 
 export default function Backlog() {
     const [backlogLibrary, setBacklogLibrary] = useState([]);
@@ -20,6 +20,20 @@ export default function Backlog() {
                 setIsLoading(false);
             })
             .catch(err => console.error(err))
+    }
+
+    function removeFromBacklogLibrary(gameId) {
+        fetch(`https://gamer-profile-project.web.app/gamerlibrary/backlog/${gameId}`, {
+            method: 'PATCH',
+            body: JSON.stringify({ gameId: gameId }),
+            headers: { 'Content-Type': 'application/json' }
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log("Game removed:", data);
+                getBacklogLibrary();
+            })
+            .catch(err => console.error(err));
     }
 
     function handleFormShowing() {
@@ -59,7 +73,7 @@ export default function Backlog() {
                                 {backlogEntry.games.map((game) => (
                                     <div key={game.title} className="library-row">
                                         <img className="library-image" src={game.cover_image} alt={game.title} />
-                                        <h4 className="library-title">{game.title}</h4><IconButton sx={{ fontSize: "small", color: "red" }}  className="delete-button"><HighlightOffIcon /></IconButton>
+                                        <h4 className="library-title">{game.title} <IconButton onClick={() => removeFromBacklogLibrary(game._id)}><HighlightOffIcon sx={{ color: "red" }} /></IconButton></h4>
                                     </div>
                                 ))}
                             </div>
