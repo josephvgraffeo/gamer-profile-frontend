@@ -1,6 +1,6 @@
 .form-modal {
     font-family: 'Cairo', sans-serif;
-    background-color: #dbe2ffd8;
+    background-color: #b8c6ffe5;
     border: 3px solid #000000;
     border-radius: 10px;
     max-height: 600px;
@@ -68,14 +68,26 @@
     height: 185px;
     width: 140px;
     outline: 2px solid #000000;
-    box-shadow: 5px 0 10px #00000096;
+    box-shadow: 7px 0 30px #040021cb;
+    border-radius: 2px;
     margin: 2.3vw;
+    transition: transform 0.35s ease-in-out;
+}
+
+.library-image:hover {
+    height: 185px;
+    width: 140px;
+    outline: 2px solid #000000;
+    box-shadow: 7px 0 30px #040021cb;
+    border-radius: 2px;
+    margin: 2.3vw;
+    transform: scale(1.05);
 }
 
 .library-title {
     font-family: 'Cairo', sans-serif;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 15px;
     margin-top: -22px;
 }
 
@@ -104,10 +116,19 @@
     box-shadow: 1px 0 12px #000000;
 }
 
+.library-container .delete-button {
+    margin-top: -5px;
+    transition: transform 0.35s ease-in-out;
+}
+
+.library-container .delete-button:hover {
+    transform: scale(1.2);
+}
+
 .form-container .drop-down-menu {
     background-color: #ffffff70;
-    transition: transform 0.35s ease-in-out;
     margin-bottom: 15px;
+    transition: transform 0.35s ease-in-out;
 }
 
 .form-container .drop-down-menu:hover,

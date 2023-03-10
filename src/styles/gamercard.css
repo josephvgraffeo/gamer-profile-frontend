@@ -5,17 +5,19 @@ div {
 
 .card-section-div {
     text-align: center;
-    background-color: #18064d4d;
+    background-color: #03002c15;
     border-radius: 7px;
     margin: 12px;
-    border: 2px solid #ff0062;
-    box-shadow: 5px 0 10px #0000005f;
+    border: 1px solid #0400219f;
+    box-shadow: 7px 0 30px #040021cb;
     padding: 3px;
+    backdrop-filter: blur(20px);
 }
 
 .card-section-div h1, h2, h3, h4, h5 {
     font-family: 'Cairo', sans-serif;
     color: #ffffff;
+    font-size: 15px;
 }
 
 .card-image {
@@ -24,8 +26,8 @@ div {
     height: 220px;
     width: 220px;
     align-content: center;
-    border: 5px solid #ff0062;
-    box-shadow: 5px 0 15px #0000005f;
+    border: 5px solid #0400219f;
+    box-shadow: 7px 0 30px #040021cb;
 }
 
 .edit-card-text {

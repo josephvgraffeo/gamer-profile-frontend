@@ -3,7 +3,7 @@
 }
 
 .navbar .navbar-toolbar {
-    background-color: #09022ae6;
+    background-color: #140029;
     box-shadow: 3px 0 12px #000000a0;
 }
 
@@ -28,6 +28,6 @@
 }
 
 .navbar .navbar-button:hover {
-    background-color: #3514bbc5;
+    background-color: #3514bbe3;
     transform: scale(1.05);
 }

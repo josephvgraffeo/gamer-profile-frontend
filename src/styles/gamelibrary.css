@@ -7,33 +7,33 @@
 }
 
 .main-status-container > .status-row > .status-row-playing {
-    background-color: #1111923f;
+    background-color: #34017756;
     display: block;
     height: 43vh;
     border-radius: 5px;
-    box-shadow: 5px 0px 30px #ea075ed8;
+    box-shadow: 5px 0px 30px #21045fdc;
     overflow-x: scroll;
     white-space: nowrap;
     backdrop-filter: blur(5px);
 }
 
 .main-status-container > .status-row > .status-row-completed {
-    background-color: #1111923f;
+    background-color: #34017756;
     display: block;
     height: 43vh;
     border-radius: 5px;
-    box-shadow: 5px 0px 30px #ea075e93;
+    box-shadow: 5px 0px 30px #21045fdc;
     overflow-x: scroll;
     white-space: nowrap;
     backdrop-filter: blur(5px);
 }
 
 .main-status-container > .status-row > .status-row-backlog {
-    background-color: #1111923f;
+    background-color: #34017756;
     display: block;
     height: 43vh;
     border-radius: 5px;
-    box-shadow: 5px 0px 30px #ea075e91;
+    box-shadow: 5px 0px 30px #21045fdc;
     overflow-x: scroll;
     white-space: nowrap;
     backdrop-filter: blur(20px);

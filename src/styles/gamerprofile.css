@@ -14,11 +14,12 @@
 }
 
 .prof-main-box > .prof-main-grid > .prof-card-grid {
-    background-color: #1111923f;
+    background-color: #34017756;
     height: 100%;
     width: 100%;
-    box-shadow: 5px 0px 20px #ea075e7c;
+    box-shadow: 5px 0px 20px #100032dc;
     overflow: auto;
+    backdrop-filter: blur(5px);
 }
 
 .prof-main-box > .prof-main-grid > .prof-lib-grid {

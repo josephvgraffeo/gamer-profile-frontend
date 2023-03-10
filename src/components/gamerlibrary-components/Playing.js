@@ -46,7 +46,7 @@ export default function Playing() {
                 ) : (
                     <div>
                         <div style={{ paddingBottom: 32 }}>
-                            <h1 className="status-text">Playing:
+                            <h1 className="status-text">Playing
                                 <IconButton className="add-button" onClick={handleFormShowing}>
                                     <Typography className="add-button-text">Add</Typography>
                                     <AddCircleOutlineIcon className="add-button-icon" />
@@ -59,7 +59,7 @@ export default function Playing() {
                                     {playingEntry.games.map((game) => (
                                         <div key={game.title} className="library-row">
                                             <img className="library-image" src={game.cover_image} alt={game.title} />
-                                            <h4 className="library-title">{game.title}</h4><IconButton sx={{ fontSize: "small", color: "red" }}><HighlightOffIcon /></IconButton>
+                                            <h4 className="library-title">{game.title}</h4><IconButton sx={{ fontSize: "small", color: "red" }}><HighlightOffIcon className="delete-button" /></IconButton>
                                         </div>
                                     ))}
                                 </div>
