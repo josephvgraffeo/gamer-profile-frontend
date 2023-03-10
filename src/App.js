@@ -8,6 +8,7 @@ import AccountPage from './scenes/AccountPage.js';
 import ProtectedRoute from './components/ProtectedRoutes.js';
 import Welcome from './scenes/Welcome.js';
 import ContactPage from './scenes/ContactPage.js';
+import Footer from './components/Footer.js';
 import './styles/App.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path='/gamerprofile' element={<ProtectedRoute><GamerProfile /></ProtectedRoute>} />
           <Route path='/account' element={<ProtectedRoute><AccountPage /></ProtectedRoute>} />
         </Routes>
+        <Footer />
       </AuthContextProvider>
     </>
   );
