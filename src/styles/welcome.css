@@ -1,5 +1,5 @@
 .welcome-page-background {
-    background-image: url("https://gamer-profile-img-bucket.s3.amazonaws.com/background-images/welcome-page-background.webp");
+    background-image: url("https://gamer-profile-img-bucket.s3.amazonaws.com/background-images/vice-sunset.webp");
     background-size: cover;
     display: flex;
     align-items: center;
@@ -15,13 +15,25 @@
     max-width: 400px;
     padding: 10px 220px;
     padding-bottom: 10px;
-    background-color: #a1daeb36;
+    background-color: #0b273086;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border: 3px solid #00000077;
-    margin-top: -0vh;
+    margin-top: -2vh;
     backdrop-filter: blur(5.5px);
     transition: transform 0.35s ease-in-out;
+}
+
+.welcome-page-container .logo {
+    height: 300px;
+    width: 420px;
+    margin-bottom: -35px;
+    margin-left: -5px;
+    transition: transform 0.35s ease-in-out;
+}
+
+.welcome-page-container .logo:hover {
+    transform: scale(1.1);
 }
 
 .welcome-page-container:hover {
@@ -45,17 +57,29 @@
 
 .welcome-page-container > h3 {
     font-family: 'Cairo', sans-serif;
-    color: #6ce7ff;
-    font-size: 20px;
+    color: #03D1FF;
+    font-size: 16px;
     font-weight: 600;
     margin-bottom: 20px;
-    text-shadow: 3px 0 10px #000000ab;
+    text-shadow: 3px 0 10px #ff00aad4;
     transition: transform 0.35s ease-in-out;
 }
 
 .welcome-page-container > h3:hover {
     transform: scale(1.1);
-    text-shadow: 3px 0 20px #000000ce;
+    text-shadow: 3px 0 20px #ff00aad4;
+}
+
+.welcome-page-container .welcome-prompt {
+    color: #03D1FF;
+    text-shadow: 3px 0 15px #ff00aad4;
+    transition: transform 0.35s ease-in-out;
+}
+
+.welcome-page-container .welcome-prompt:hover {
+    color: #03D1FF;
+    text-shadow: 3px 0 20px #ff00aad4;
+    transform: scale(1.05);
 }
 
 .welcome-page-container .form-footer {
@@ -83,15 +107,15 @@
 .welcome-page-container .welcome-page-button {
     font-family: 'Cairo', sans-serif;
     margin-top: 10px;
-    background-color: #aee7ecdf;
+    background-color: #ff00aab0;
     color: #000000;
-    box-shadow: 2px 0 12px #515050;
+    box-shadow: 0px 0 10px #03D1FF;
     transition: transform .3s ease-in-out;
 }
 
 .welcome-page-container .welcome-page-button:hover {
-    background-color: #74e8f3;
+    background-color: #ff00aa;
     color: #000000;
-    box-shadow: 2px 0 15px #3a3939;
+    box-shadow: 0px 0 20px #03D1FF;
     transform: scale(1.15);
 }

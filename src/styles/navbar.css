@@ -2,6 +2,14 @@
     position: sticky;
 }
 
+.navbar .nav-logo {
+    transition: transform 0.35s ease-in-out;
+}
+
+.navbar .nav-logo:hover {
+    transform: scale(1.05);
+}
+
 .navbar .navbar-toolbar {
     background-color: #140029;
     box-shadow: 3px 0 12px #000000a0;

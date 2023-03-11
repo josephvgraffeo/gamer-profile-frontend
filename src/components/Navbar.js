@@ -20,8 +20,8 @@ export default function Navbar() {
     return (
         <AppBar className="navbar" position="static">
             <Toolbar className="navbar-toolbar" sx={{ justifyContent: 'space-between' }}>
-                {/* <img src="https://gamer-profile-img-bucket.s3.amazonaws.com/profile-images/certifiedgamer.gif" alt="header" /> */}
-                <Typography className="navbar-header" variant="h4" component="div">CertifiedGamer</Typography>
+                <img src="https://gamer-profile-img-bucket.s3.amazonaws.com/profile-images/vice-logo.png" alt="header" style={{ height: 40, width: 270 }} className="nav-logo" />
+                {/* <Typography className="navbar-header" variant="h4" component="div">CertifiedGamer</Typography> */}
                 <Stack className="navbar-stack" direction="row" spacing={2}>
                     <Box className="navbar-box">
                         <Button className="navbar-button" size="large" variant="text" component={Link} to="/gamerprofile">Profile</Button>

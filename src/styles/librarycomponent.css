@@ -78,10 +78,20 @@
     height: 185px;
     width: 140px;
     outline: 2px solid #000000;
-    box-shadow: 7px 0 30px #040021cb;
+    box-shadow: 0px 0 20px #ff0077;
     border-radius: 2px;
     margin: 2.3vw;
     transform: scale(1.1);
+}
+
+.library-image:active {
+    height: 185px;
+    width: 140px;
+    outline: 2px solid #000000;
+    box-shadow: 0px 0 20px #00c3ff;
+    border-radius: 2px;
+    margin: 2.3vw;
+    transform: scale(1.15);
 }
 
 .library-title {
