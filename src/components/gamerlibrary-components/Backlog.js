@@ -9,6 +9,9 @@ export default function Backlog() {
     const [backlogLibrary, setBacklogLibrary] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [formShowing, setFormShowing] = useState(false);
+    const [infoModalData, setInfoModalData] = useState([]);
+    const [infoModalShowing, setInfoModalShowing] = useState(false);
+    const [infoModalId, setInfoModalId] = useState(null);
 
     useEffect(() => { getBacklogLibrary() }, [])
 
@@ -36,12 +39,35 @@ export default function Backlog() {
             .catch(err => console.error(err));
     }
 
+    function getAdditionalEntryInfo(gameId) {
+        fetch(`https://gamer-profile-project.web.app/entryInfo/${gameId}`)
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data)
+                setInfoModalData([data])
+            })
+            .catch((err) => console.error(err));
+    }
+
     function handleFormShowing() {
         setFormShowing(true);
     }
 
     function handleCloseForm() {
         setFormShowing(false);
+    }
+
+    async function handleInfoModalShowing(gameId) {
+        setInfoModalShowing(true);
+        setInfoModalId(gameId);
+        await getAdditionalEntryInfo(gameId);
+        console.log(gameId)
+    }
+
+    function handleCloseInfoModal() {
+        setInfoModalShowing(false);
+        setInfoModalId("");
+        setInfoModalData([]);
     }
 
     return (
@@ -72,7 +98,7 @@ export default function Backlog() {
                             <div key={backlogEntry._id}>
                                 {backlogEntry.games.map((game) => (
                                     <div key={game.title} className="library-row">
-                                        <img className="library-image" src={game.cover_image} alt={game.title} />
+                                        <img className="library-image" src={game.cover_image} alt={game.title} onClick={() => handleInfoModalShowing(game._id)} />
                                         <h4 className="library-title">{game.title} <IconButton onClick={() => removeFromBacklogLibrary(game._id)}><HighlightOffIcon sx={{ color: "red" }} /></IconButton></h4>
                                     </div>
                                 ))}
@@ -82,6 +108,20 @@ export default function Backlog() {
                     {formShowing && (
                         <Modal className="form-modal" open={true} onClose={handleCloseForm}>
                             <AddGameToLibrary status="backlog" handleCloseForm={handleCloseForm} getBacklogLibrary={getBacklogLibrary} />
+                        </Modal>
+                    )}
+                    {infoModalShowing && (
+                        <Modal className="info-modal" open={true} onClose={handleCloseInfoModal}>
+                            <div>
+                                {infoModalData.map((info) => (
+                                    <div key={info._id}>
+                                        <p>Rating: {info.rating}</p>
+                                        <p>Hours: {info.hours}</p>
+                                        <p>Platform: {info.platform}</p>
+                                        <p>Comments: {info.comments}</p>
+                                    </div>
+                                ))}
+                            </div>
                         </Modal>
                     )}
                 </div>
