@@ -25,9 +25,14 @@ export default function GamerLibrary() {
         <>
             {isLoading
                 ? (<CircularProgress
-                    color="secondary"
                     size={100}
-                    style={{ position: 'absolute', top: '40%', left: '58%', transform: 'translate(-50%, -50%)' }}
+                    style={{ 
+                        color: "#4c00be",
+                        position: 'absolute', 
+                        top: '50%', 
+                        left: '58%', 
+                        transform: 'translate(-50%, -50%)' 
+                    }}
                 />
                 ) : (
                     <Grid className="main-status-container" container>

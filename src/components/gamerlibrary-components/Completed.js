@@ -1,9 +1,10 @@
-import { CircularProgress, IconButton, Modal, Typography } from "@mui/material";
+import { CircularProgress, IconButton, Modal, Rating, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import AddGameToLibrary from "./AddToLibrary";
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import "../../styles/librarycomponent.css";
+import "../../styles/infomodal.css";
 
 export default function Completed() {
     const [completedLibrary, setCompletedLibrary] = useState([]);
@@ -74,12 +75,12 @@ export default function Completed() {
         <>
             {isLoading
                 ? (<CircularProgress
-                    color="secondary"
                     size={100}
                     style={{
+                        color: "#4c00be",
                         position: "absolute",
-                        top: "0%",
-                        left: "30%",
+                        top: "31%",
+                        left: "45%",
                         transform: "translate(-50%, -50%)",
                     }}
                 />
@@ -112,13 +113,13 @@ export default function Completed() {
                         )}
                         {infoModalShowing && (
                             <Modal className="info-modal" open={true} onClose={handleCloseInfoModal}>
-                                <div>
+                                <div className="info-modal-content">
                                     {infoModalData.map((info) => (
                                         <div key={info._id}>
-                                            <p>Rating: {info.rating}</p>
-                                            <p>Hours: {info.hours}</p>
-                                            <p>Platform: {info.platform}</p>
-                                            <p>Comments: {info.comments}</p>
+                                            <h4>Rating: </h4><Rating readOnly value={info.rating} />
+                                            <h4>Hours: </h4><p>{info.hours}</p>
+                                            <h4>Platform: </h4><p>{info.platform}</p>
+                                            <h4>Comments: </h4><p>{info.comments}</p>
                                         </div>
                                     ))}
                                 </div>

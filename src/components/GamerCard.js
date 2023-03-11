@@ -62,12 +62,12 @@ export default function GamerCard() {
         <>
             {isLoading ? (
                 <CircularProgress
-                    color="secondary"
                     size={100}
                     style={{
+                        color: "#4c00be",
                         position: "absolute",
-                        top: "0%",
-                        left: "30%",
+                        top: "35%",
+                        left: "35%",
                         transform: "translate(-50%, -50%)",
                     }}
                 />
