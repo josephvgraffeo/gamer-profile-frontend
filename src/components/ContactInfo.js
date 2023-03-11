@@ -14,7 +14,7 @@ export default function ContactInfo() {
                 <h1>How To Contact</h1>
                 <div>
                     <h2>Contact Information:</h2>
-                    <p>Here is some contact information</p>
+                    <img src="https://gamer-profile-img-bucket.s3.amazonaws.com/profile-images/candidate-page-qr.png" alt="contact-qr-code" className="contact-qr" />
                 </div>
                 <Button className="contact-about-button" component={Link} to='/gamerprofile'>Return to Profile</Button>
             </div>

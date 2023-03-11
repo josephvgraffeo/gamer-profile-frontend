@@ -4,7 +4,7 @@ h1, h2, p {
 }
 
 .contact-about-background {
-    background-image: url("https://gamer-profile-img-bucket.s3.amazonaws.com/background-images/contact-about-background.webp");
+    background-image: url("https://gamer-profile-img-bucket.s3.amazonaws.com/background-images/tokyo-retro-synth.webp");
     background-size: cover;
     display: flex;
     align-items: center;
@@ -19,7 +19,7 @@ h1, h2, p {
     width: 90%;
     max-width: 400px;
     padding: 50px 210px;
-    background-color: #efa93024;
+    background-color: #4a049a46;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border: 3px solid #00000077;
@@ -32,9 +32,14 @@ h1, h2, p {
     transform: scale(1.025);
 }
 
+.contact-about-container .contact-qr {
+    height: 250px;
+    width: 200px;
+}
+
 .contact-about-container > h1 {
     font-family: 'Cairo', sans-serif;
-    color: #ff853e;
+    color: #ffffff;
     font-size: 42px;
     font-weight: 600;
     margin-bottom: -10px;
@@ -47,24 +52,24 @@ h1, h2, p {
     text-shadow: 3px 0 20px #000000ce;
 }
 
-.contact-about-container > p {
+.contact-about-container p {
     font-family: 'Cairo', sans-serif;
-    color: #f5a448;
-    font-size: 17px;
+    color: #ffffff;
+    font-size: 14px;
     font-weight: 600;
     margin-bottom: 20px;
     text-shadow: 3px 0 10px #000000ab;
     transition: transform 0.35s ease-in-out;
 }
 
-.contact-about-container > p:hover {
+.contact-about-container p:hover {
     transform: scale(1.1);
     text-shadow: 3px 0 18px #000000ed;
 }
 
 .contact-about-container h2 {
     font-family: 'Cairo', sans-serif;
-    color: #ff9d56;
+    color: #ffffff;
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 20px;
