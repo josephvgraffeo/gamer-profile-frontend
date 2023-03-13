@@ -138,22 +138,17 @@
     .welcome-page-container {
         font-family: 'Cairo', sans-serif;
         color: #ffffff;
-        padding: 10px 220px;
         background-color: #0b273086;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         border: 3px solid #00000077;
-        margin-top: -2vh;
         backdrop-filter: blur(5.5px);
+        margin-top: -180px;
         transition: transform 0.35s ease-in-out;
-        max-height: 600px;
-        max-width: 400px;
-        overflow-y: scroll;
     }
 
     .welcome-page-container .logo {
-        height: 300px;
-        width: 420px;
-        margin-left: -180px;
+        height: 180px;
+        width: 250px;
         transition: transform 0.35s ease-in-out;
     }
 
@@ -240,9 +235,5 @@
         color: #000000;
         box-shadow: 0px 0 20px #03D1FF;
         transform: scale(1.15);
-    }
-
-    .welcome-page-container .logsign-container {
-        margin-left: -60px;
     }
 }

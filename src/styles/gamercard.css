@@ -116,7 +116,6 @@ h5 {
         align-items: center;
         text-align: center;
         display: block;
-        overflow-y: scroll;
     }
 
     .card-section-div {

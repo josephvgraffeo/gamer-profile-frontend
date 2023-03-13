@@ -72,7 +72,7 @@ export default function GamerCard() {
                     }}
                 />
             ) : (
-                <div>
+                <div className="card-container">
                     {gamerCard.map((gamerCard) => (
                         <div key={gamerCard._id}>
                             <img
