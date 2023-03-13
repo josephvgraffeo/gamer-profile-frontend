@@ -80,3 +80,88 @@
     color: #000000;
     transform: scale(1.15);
 }
+
+@media screen and (max-width: 700px) {
+    .login-page-background {
+        background-image: url("https://gamer-profile-img-bucket.s3.amazonaws.com/background-images/login-background.webp");
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .login-form-container {
+        font-family: 'Cairo', sans-serif;
+        color: #ffffff;
+        position: relative;
+        width: 90%;
+        max-width: 400px;
+        padding: 90px 50px;
+        background-color: #3380f21b;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border: 3px solid #00000077;
+        margin-top: -20vh;
+        backdrop-filter: blur(5px);
+        transition: transform 0.35s ease-in-out;
+    }
+
+    .login-form-container:hover {
+        transform: scale(1.05);
+        backdrop-filter: blur(5.5px);
+        background-color: #2776ed1b;
+    }
+
+    .login-form-container .login-form-title {
+        font-family: 'Cairo', sans-serif;
+        color: #ffffff;
+        font-size: 50px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-shadow: 3px 0 8px #ffffffab;
+        transition: transform 0.35s ease-in-out;
+    }
+
+    .login-form-container .login-form-title:hover {
+        transform: scale(1.1);
+        text-shadow: 3px 0 20px #ffffffab;
+    }
+
+    .login-form-container .form-footer {
+        color: #ffffff;
+        transition: transform .35s ease-in-out;
+    }
+
+    .login-form-container .form-footer:hover {
+        transform: scale(1.1);
+    }
+
+    .login-form-container .text-field {
+        background-color: #ffffffae;
+        border-radius: 5px;
+        box-shadow: 2px 0 10px #ffffff6c;
+        transition: transform .35s ease-in-out;
+    }
+
+    .login-form-container .text-field:hover,
+    .login-form-container .text-field:focus-within {
+        background-color: #ffffff;
+        transform: scale(1.05);
+    }
+
+    .login-form-container .login-form-button {
+        font-family: 'Cairo', sans-serif;
+        margin-top: 10px;
+        background-color: #ffffffdd;
+        color: #000000;
+        box-shadow: 2px 0 10px #ffffffe3;
+        transition: transform .3s ease-in-out;
+    }
+
+    .login-form-container .login-form-button:hover {
+        background-color: #ffffff;
+        color: #000000;
+        transform: scale(1.15);
+    }
+}

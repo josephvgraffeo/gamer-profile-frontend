@@ -63,6 +63,7 @@
         overflow-y: hidden;
         white-space: nowrap;
         backdrop-filter: blur(5px);
+        margin-bottom: 10px;
     }
 
     .main-status-container>.status-row>.status-row-completed {

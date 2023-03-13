@@ -109,6 +109,21 @@
     transform: scale(1.1);
 }
 
+.form-container .comments-text-field {
+    background-color: #ffffff70;
+    border-radius: 5px;
+    width: 500px;
+    transition: transform 0.35s ease-in-out;
+    margin: 15px;
+}
+
+.form-container .comments-text-field:hover,
+.form-container .comments-text-field:focus-visible {
+    background-color: #ffffffd5;
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
 .form-container .input-button {
     box-shadow: 1px 0 8px #0000008a;
     margin-top: 8px;
@@ -129,9 +144,10 @@
     transform: scale(1.2);
 }
 
-.form-container .drop-down-menu {
+.form-inputs .drop-down-menu {
     background-color: #ffffff70;
     margin-bottom: 15px;
+    width: 400px;
     transition: transform 0.35s ease-in-out;
 }
 
@@ -163,6 +179,174 @@
         box-shadow: 7px 0 30px #040021cb;
         border-radius: 2px;
         margin-top: 50px;
+        margin-bottom: 18px;
         transition: transform 0.35s ease-in-out;
+    }
+
+    .form-modal {
+        font-family: 'Cairo', sans-serif;
+        background-color: #b8c6ffe5;
+        border: 3px solid #000000;
+        border-radius: 10px;
+        max-height: 600px;
+        max-width: 900px;
+        min-height: 200px;
+        min-width: 300px;
+        margin: auto;
+        top: 50%;
+        padding-top: 5.5vh;
+        overflow-y: scroll;
+    }
+
+    .library-row {
+        display: inline-block;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .add-button {
+        font-family: 'Cairo', sans-serif;
+        color: #30b410;
+        transition: transform .3s ease-in-out;
+    }
+
+    .add-button:hover {
+        transform: scale(1.1);
+    }
+
+    .add-button-icon {
+        font-family: 'Cairo', sans-serif;
+        float: right;
+        color: #30b410;
+        transition: transform .3s ease-in-out;
+    }
+
+    .add-button-icon:hover {
+        transform: scale(1.1);
+    }
+
+    .add-button .add-button-text {
+        font-family: 'Cairo', sans-serif;
+        margin-right: .25vw;
+        color: #30b410;
+        transition: transform .3s ease-in-out;
+    }
+
+    .add-button .add-button-text:hover {
+        transform: scale(1.05);
+        color: #3ee814;
+    }
+
+    .status-text {
+        font-family: 'Cairo', sans-serif;
+        color: #ffffff;
+        float: left;
+        font-size: 25px;
+        margin-left: 1.8vw;
+        margin-top: 1px;
+        text-shadow: 4px 0 3px #000000d1;
+        position: absolute;
+    }
+
+    .library-image:hover {
+        height: 185px;
+        width: 140px;
+        outline: 2px solid #000000;
+        box-shadow: 0px 0 20px #4c01cc;
+        border-radius: 2px;
+        margin: 2.3vw;
+        transform: scale(1.1);
+    }
+
+    .library-image:active {
+        transform: scale(1.15);
+    }
+
+    .library-title {
+        font-family: 'Cairo', sans-serif;
+        color: #ffffff;
+        font-size: 15px;
+        margin-top: -22px;
+    }
+
+    .form-control {
+        margin-left: -100px;
+    }
+
+    .form-container .text-field {
+        background-color: #ffffff70;
+        border-radius: 5px;
+        transition: transform 0.35s ease-in-out;
+        margin: 10px;
+    }
+
+    .form-container .text-field:hover,
+    .form-container .text-field:focus-visible {
+        background-color: #ffffffd5;
+        border-radius: 5px;
+        transform: scale(1.1);
+    }
+
+    .form-container .comments-text-field {
+        background-color: #ffffff70;
+        border-radius: 5px;
+        width: 200px;
+        transition: transform 0.35s ease-in-out;
+        margin: 10px;
+    }
+
+    .form-container .text-field:hover,
+    .form-container .text-field:focus-visible {
+        background-color: #ffffffd5;
+        border-radius: 5px;
+        transform: scale(1.1);
+    }
+
+    .form-container .input-button {
+        box-shadow: 1px 0 8px #0000008a;
+        margin-top: 8px;
+        transition: transform 0.35s ease-in-out;
+    }
+
+    .form-container .input-button:hover {
+        transform: scale(1.1);
+        box-shadow: 1px 0 12px #000000;
+    }
+
+    .library-container .delete-button {
+        margin-top: -5px;
+        transition: transform 0.35s ease-in-out;
+    }
+
+    .library-container .delete-button:hover {
+        transform: scale(1.2);
+    }
+
+    .form-container .drop-down-menu {
+        background-color: #ffffff70;
+        margin-bottom: 15px;
+        width: 170px;
+        transition: transform 0.35s ease-in-out;
+    }
+
+    .form-container .drop-down-menu:hover,
+    .form-container .drop-down-menu:focus-visible {
+        background-color: #ffffffd5;
+        transform: scale(1.05);
+    }
+
+    .close-components .close-form-text {
+        font-family: 'Cairo', sans-serif;
+        font-size: 15px;
+        color: #ee0b0b;
+        display: inline;
+    }
+
+    .close-components .close-form-button {
+        color: #ee0b0b;
+        display: inline;
+        float: right;
     }
 }

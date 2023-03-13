@@ -77,7 +77,7 @@ export default function AddGameToLibrary(props) {
                 <p className="close-form-text">Cancel</p><IconButton onClick={props.handleCloseForm}><CloseIcon className="close-form-button" /></IconButton>
             </div>
             <div className="form-inputs">
-                <Select displayEmpty value={selectedGame} onChange={handleSetSelectedGame} sx={{ width: "400px" }} className="drop-down-menu">
+                <Select displayEmpty value={selectedGame} onChange={handleSetSelectedGame} className="drop-down-menu">
                     <MenuItem value="" disabled>
                         <em>Select Game</em>
                     </MenuItem>
@@ -91,11 +91,10 @@ export default function AddGameToLibrary(props) {
                     <TextField variant="filled" label="Hours Played" value={hours} onChange={(e) => setHours(e.target.value)} className="text-field" />
                     <TextField variant="filled" label="Platform/Console" value={platform} onChange={(e) => setPlatform(e.target.value)} className="text-field" />
                     <TextField label="Comments" value={comments} multiline rows={6} sx={{
-                        width: '500px',
                         '& .MuiOutlinedInput-input': { width: '100%' },
                         '& .MuiOutlinedInput-root': { width: '100%' },
                     }} onChange={(e) => setComments(e.target.value)}
-                        className="text-field" />
+                        className="comments-text-field" />
                 </FormControl>
                 <br />
                 <Button

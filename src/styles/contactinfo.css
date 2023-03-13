@@ -144,7 +144,7 @@ p {
         max-height: 500px;
         max-width: 300px;
         overflow-y: scroll;
-        padding: 50px 250px;
+        padding: 50px 100px;
         background-color: #4a049a46;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -161,7 +161,7 @@ p {
     .contact-about-container .contact-qr {
         height: 250px;
         width: 200px;
-        margin-left: -90px;
+        margin-left: -14px;
     }
 
     .contact-about-container>h1 {
