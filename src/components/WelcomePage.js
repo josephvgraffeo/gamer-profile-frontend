@@ -7,7 +7,7 @@ export default function WelcomePage() {
 
         <div className="welcome-page-background">
             <div className="welcome-page-container">
-                <img src="https://gamer-profile-img-bucket.s3.amazonaws.com/profile-images/certified-gamer-nobg.png" alt="logo" className="logo" />
+            <img src="https://gamer-profile-img-bucket.s3.amazonaws.com/profile-images/certified-gamer-nobg.png" alt="logo" className="logo" />
                 <h3>Track what you're playing</h3>
                 <h3>Connect with your friends</h3>
                 <h3>Level up your gaming experience</h3>
