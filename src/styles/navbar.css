@@ -1,5 +1,6 @@
 .navbar {
     position: sticky;
+    overflow-x: scroll;
 }
 
 .navbar .nav-logo {
@@ -38,4 +39,56 @@
 .navbar .navbar-button:hover {
     background-color: #3514bbe3;
     transform: scale(1.05);
+}
+
+/* mobile */
+@media screen and (max-width: 700px) {
+    .navbar {
+        background-color: #140029;
+        position: sticky;
+        overflow-x: scroll;
+    }
+
+    .navbar .nav-logo {
+        transition: transform 0.35s ease-in-out;
+    }
+
+    .navbar .nav-logo:hover {
+        transform: scale(1.05);
+    }
+
+    .navbar .navbar-toolbar {
+        background-color: #140029;
+        color: #140029;
+        box-shadow: 3px 0 12px #000000a0;
+    }
+
+    .navbar .navbar-header {
+        font-family: 'Cairo', sans-serif;
+        font-weight: 600;
+        padding-left: 10px;
+        background-color: #140029;
+        color: #140029;
+    }
+
+    .navbar .navbar-box {
+        display: flex;
+        flex-grow: 1;
+        background-color: #140029;
+        color: #140029;
+    }
+
+    .navbar .navbar-button {
+        font-family: 'Cairo', sans-serif;
+        color: white;
+        padding: 15px;
+        margin: 5px;
+        font-size: 16px;
+        transition: transform .3s ease-in-out;
+    }
+
+    .navbar .navbar-button:hover {
+        background-color: #3514bbe3;
+        transform: scale(1.05);
+    }
 }

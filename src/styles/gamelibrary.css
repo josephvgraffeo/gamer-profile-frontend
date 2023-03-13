@@ -2,11 +2,11 @@
     display: block;
 }
 
-.main-status-container > .status-row {
+.main-status-container>.status-row {
     display: inline-block;
 }
 
-.main-status-container > .status-row > .status-row-playing {
+.main-status-container>.status-row>.status-row-playing {
     background-color: #34017756;
     display: block;
     height: 43vh;
@@ -18,7 +18,7 @@
     backdrop-filter: blur(5px);
 }
 
-.main-status-container > .status-row > .status-row-completed {
+.main-status-container>.status-row>.status-row-completed {
     background-color: #34017756;
     display: block;
     height: 43vh;
@@ -30,7 +30,7 @@
     backdrop-filter: blur(5px);
 }
 
-.main-status-container > .status-row > .status-row-backlog {
+.main-status-container>.status-row>.status-row-backlog {
     background-color: #34017756;
     display: block;
     height: 43vh;
@@ -40,4 +40,52 @@
     overflow-y: hidden;
     white-space: nowrap;
     backdrop-filter: blur(20px);
+}
+
+/* mobile */
+@media screen and (max-width: 700px) {
+    .main-status-container {
+        display: block;
+        overflow-y: scroll;
+    }
+
+    .main-status-container>.status-row {
+        display: inline-block;
+    }
+
+    .main-status-container>.status-row>.status-row-playing {
+        background-color: #34017756;
+        display: block;
+        height: 43vh;
+        border-radius: 5px;
+        box-shadow: 5px 0px 30px #21045fdc;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        backdrop-filter: blur(5px);
+    }
+
+    .main-status-container>.status-row>.status-row-completed {
+        background-color: #34017756;
+        display: block;
+        height: 43vh;
+        border-radius: 5px;
+        box-shadow: 5px 0px 30px #21045fdc;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        backdrop-filter: blur(5px);
+    }
+
+    .main-status-container>.status-row>.status-row-backlog {
+        background-color: #34017756;
+        display: block;
+        height: 43vh;
+        border-radius: 5px;
+        box-shadow: 5px 0px 30px #21045fdc;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        backdrop-filter: blur(20px);
+    }
 }

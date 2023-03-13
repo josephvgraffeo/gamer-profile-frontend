@@ -1,4 +1,6 @@
-h1, h2, p {
+h1,
+h2,
+p {
     font-family: 'Cairo', sans-serif;
     color: #000000;
 }
@@ -17,7 +19,9 @@ h1, h2, p {
     color: #ffffff;
     position: relative;
     width: 90%;
+    max-height: 500px;
     max-width: 400px;
+    overflow-y: scroll;
     padding: 50px 210px;
     background-color: #4a049a46;
     border-radius: 10px;
@@ -37,7 +41,7 @@ h1, h2, p {
     width: 200px;
 }
 
-.contact-about-container > h1 {
+.contact-about-container>h1 {
     font-family: 'Cairo', sans-serif;
     color: #ffffff;
     font-size: 42px;
@@ -47,7 +51,7 @@ h1, h2, p {
     transition: transform 0.35s ease-in-out;
 }
 
-.contact-about-container > h1:hover {
+.contact-about-container>h1:hover {
     transform: scale(1.1);
     text-shadow: 3px 0 20px #000000ce;
 }
@@ -107,15 +111,162 @@ h1, h2, p {
 .contact-about-container .contact-about-button {
     font-family: 'Cairo', sans-serif;
     margin-top: 10px;
-    background-color: #f5a448;
+    background-color: #00bfff;
     color: #000000;
     box-shadow: 2px 0 10px #000000bc;
     transition: transform .3s ease-in-out;
 }
 
 .contact-about-container .contact-about-button:hover {
-    background-color: #ff7300;
+    background-color: #00eeff;
     color: #000000;
     box-shadow: 2px 0 15px #000000db;
     transform: scale(1.15);
+}
+
+/* mobile */
+@media screen and (max-width: 700px) {
+
+    .contact-about-background {
+        background-image: url("https://gamer-profile-img-bucket.s3.amazonaws.com/background-images/tokyo-retro-synth.webp");
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .contact-about-container {
+        font-family: 'Cairo', sans-serif;
+        color: #ffffff;
+        position: relative;
+        width: 90%;
+        max-height: 500px;
+        max-width: 300px;
+        overflow-y: scroll;
+        padding: 50px 250px;
+        background-color: #4a049a46;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border: 3px solid #00000077;
+        margin-top: -10vh;
+        backdrop-filter: blur(5.5px);
+        transition: transform 0.35s ease-in-out;
+    }
+
+    .contact-about-container:hover {
+        transform: scale(1.025);
+    }
+
+    .contact-about-container .contact-qr {
+        height: 250px;
+        width: 200px;
+        margin-left: -90px;
+    }
+
+    .contact-about-container>h1 {
+        font-family: 'Cairo', sans-serif;
+        color: #ffffff;
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: -10px;
+        text-shadow: 3px 0 8px #000000ab;
+        transition: transform 0.35s ease-in-out;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-about-container>h1:hover {
+        transform: scale(1.1);
+        text-shadow: 3px 0 20px #000000ce;
+    }
+
+    .contact-about-container p {
+        font-family: 'Cairo', sans-serif;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-shadow: 3px 0 10px #000000ab;
+        transition: transform 0.35s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-about-container p:hover {
+        transform: scale(1.1);
+        text-shadow: 3px 0 18px #000000ed;
+    }
+
+    .contact-about-container h2 {
+        font-family: 'Cairo', sans-serif;
+        color: #ffffff;
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-shadow: 3px 0 12px #000000;
+        transition: transform 0.35s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-about-container h2:hover {
+        transform: scale(1.1);
+        text-shadow: 3px 0 20px #000000f0;
+    }
+
+    .contact-about-container .form-footer {
+        color: #ffffff;
+        transition: transform .35s ease-in-out;
+    }
+
+    .contact-about-container .form-footer:hover {
+        transform: scale(1.1);
+    }
+
+    .contact-about-container .text-field {
+        background-color: #ffffffae;
+        border-radius: 5px;
+        box-shadow: 2px 0 10px #ffffff6c;
+        transition: transform .35s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-about-container .text-field:hover,
+    .contact-about-container .text-field:focus-within {
+        background-color: #ffffff;
+        transform: scale(1.05);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-about-container .contact-about-button {
+        font-family: 'Cairo', sans-serif;
+        margin-top: 10px;
+        background-color: #00bfff;
+        color: #000000;
+        box-shadow: 2px 0 10px #000000bc;
+        transition: transform .3s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: -18px;
+    }
+
+    .contact-about-container .contact-about-button:hover {
+        background-color: #00eeff;
+        color: #000000;
+        box-shadow: 2px 0 15px #000000db;
+        transform: scale(1.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }

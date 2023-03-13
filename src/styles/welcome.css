@@ -40,7 +40,7 @@
     transform: scale(1.025);
 }
 
-.welcome-page-container > h1 {
+.welcome-page-container>h1 {
     font-family: 'Cairo', sans-serif;
     color: #66d3e8;
     font-size: 55px;
@@ -50,12 +50,12 @@
     transition: transform 0.5s ease-in-out;
 }
 
-.welcome-page-container > h1:hover {
+.welcome-page-container>h1:hover {
     transform: scale(1.1);
     text-shadow: 3px 0 15px #000000d8;
 }
 
-.welcome-page-container > h3 {
+.welcome-page-container>h3 {
     font-family: 'Cairo', sans-serif;
     color: #03D1FF;
     font-size: 16px;
@@ -65,7 +65,7 @@
     transition: transform 0.35s ease-in-out;
 }
 
-.welcome-page-container > h3:hover {
+.welcome-page-container>h3:hover {
     transform: scale(1.1);
     text-shadow: 3px 0 20px #ff00aad4;
 }
@@ -104,6 +104,10 @@
     transform: scale(1.05);
 }
 
+.welcome-page-container .button-container {
+    display: inline;
+}
+
 .welcome-page-container .welcome-page-button {
     font-family: 'Cairo', sans-serif;
     margin-top: 10px;
@@ -118,4 +122,127 @@
     color: #000000;
     box-shadow: 0px 0 20px #03D1FF;
     transform: scale(1.15);
+}
+
+/* mobile */
+@media screen and (max-width: 700px) {
+    .welcome-page-background {
+        background-image: url("https://gamer-profile-img-bucket.s3.amazonaws.com/background-images/vice-sunset.webp");
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .welcome-page-container {
+        font-family: 'Cairo', sans-serif;
+        color: #ffffff;
+        padding: 10px 220px;
+        background-color: #0b273086;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border: 3px solid #00000077;
+        margin-top: -2vh;
+        backdrop-filter: blur(5.5px);
+        transition: transform 0.35s ease-in-out;
+        max-height: 600px;
+        max-width: 400px;
+        overflow-y: scroll;
+    }
+
+    .welcome-page-container .logo {
+        height: 300px;
+        width: 420px;
+        margin-left: -180px;
+        transition: transform 0.35s ease-in-out;
+    }
+
+    .welcome-page-container .logo:hover {
+        transform: scale(1.1);
+    }
+
+    .welcome-page-container:hover {
+        transform: scale(1.025);
+    }
+
+    .welcome-page-container>h1:hover {
+        transform: scale(1.1);
+        text-shadow: 3px 0 15px #000000d8;
+    }
+
+    .welcome-page-container h3 {
+        font-family: 'Cairo', sans-serif;
+        color: #03D1FF;
+        font-size: 16px;
+        font-weight: 600;
+        text-shadow: 3px 0 10px #ff00aad4;
+        transition: transform 0.35s ease-in-out;
+    }
+
+    .welcome-page-container h3:hover {
+        transform: scale(1.1);
+        text-shadow: 3px 0 20px #ff00aad4;
+    }
+
+    .welcome-page-container .welcome-prompt {
+        color: #03D1FF;
+        text-shadow: 3px 0 15px #ff00aad4;
+        align-items: center;
+        font-size: 12px;
+        transition: transform 0.35s ease-in-out;
+    }
+
+    .welcome-page-container .welcome-prompt:hover {
+        color: #03D1FF;
+        text-shadow: 3px 0 20px #ff00aad4;
+        transform: scale(1.05);
+    }
+
+    .welcome-page-container .form-footer {
+        color: #ffffff;
+        transition: transform .35s ease-in-out;
+    }
+
+    .welcome-page-container .form-footer:hover {
+        transform: scale(1.1);
+    }
+
+    .welcome-page-container .text-field {
+        background-color: #ffffffae;
+        border-radius: 5px;
+        box-shadow: 2px 0 10px #ffffff6c;
+        transition: transform .35s ease-in-out;
+    }
+
+    .welcome-page-container .text-field:hover,
+    .welcome-page-container .text-field:focus-within {
+        background-color: #ffffff;
+        transform: scale(1.05);
+    }
+
+    .welcome-page-container .button-container {
+        display: inline;
+        width: 500px;
+        margin-left: -120px;
+    }
+
+    .welcome-page-container .welcome-page-button {
+        font-family: 'Cairo', sans-serif;
+        margin-top: 10px;
+        background-color: #ff00aab0;
+        color: #000000;
+        box-shadow: 0px 0 10px #03D1FF;
+        transition: transform .3s ease-in-out;
+    }
+
+    .welcome-page-container .welcome-page-button:hover {
+        background-color: #ff00aa;
+        color: #000000;
+        box-shadow: 0px 0 20px #03D1FF;
+        transform: scale(1.15);
+    }
+
+    .welcome-page-container .logsign-container {
+        margin-left: -60px;
+    }
 }

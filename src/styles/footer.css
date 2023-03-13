@@ -1,0 +1,32 @@
+.footer {
+    background-color: #210141;
+    color: #210141;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer .copyright {
+    color: #00a6ff;
+    font-size: 12px;
+}
+
+.footer-content {
+    background-color: #210141;
+    color: #00b7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    color: #ff008c;
+    text-decoration: none;
+    margin-left: 50px;
+    font-size: 12px;
+}
+
+.link:hover {
+    color: #ff60aa;
+    text-decoration: underline;
+}

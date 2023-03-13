@@ -93,3 +93,105 @@
     color: #000000;
     transform: scale(1.15);
 }
+
+
+/* mobile */
+@media screen and (max-width: 700px) {
+    .account-info-background {
+        background-image: url("../../public/assets/images/account-info-background.webp");
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    
+    .account-info-container {
+        font-family: 'Cairo', sans-serif;
+        color: #ffffff;
+        position: relative;
+        width: 90%;
+        max-height: 400px;
+        max-width: 300px;
+        padding: 90px 150px;
+        background-color: #efa93024;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border: 3px solid #00000077;
+        margin-top: -15vh;
+        backdrop-filter: blur(5.5px);
+        transition: transform 0.35s ease-in-out;
+    }
+    
+    .account-info-container:hover {
+        transform: scale(1.05);
+    }
+    
+    .account-info-container > h1 {
+        font-family: 'Cairo', sans-serif;
+        color: #fbe600;
+        font-size: 42px;
+        font-weight: 600;
+        margin-top: -30px;
+        margin-bottom: 20px;
+        text-shadow: 3px 0 8px #000000ab;
+        transition: transform 0.35s ease-in-out;
+    }
+    
+    .account-info-container > h1:hover {
+        transform: scale(1.1);
+        text-shadow: 3px 0 20px #000000ce;
+    }
+    
+    .account-info-container > p {
+        font-family: 'Cairo', sans-serif;
+        color: #fbe600;
+        font-size: 17px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-shadow: 3px 0 10px #000000ab;
+        transition: transform 0.35s ease-in-out;
+    }
+    
+    .account-info-container > p:hover {
+        transform: scale(1.1);
+        text-shadow: 3px 0 20px #000000ce;
+    }
+    
+    .account-info-container .form-footer {
+        color: #ffffff;
+        transition: transform .35s ease-in-out;
+    }
+    
+    .account-info-container .form-footer:hover {
+        transform: scale(1.1);
+    }
+    
+    .account-info-container .text-field {
+        background-color: #ffffffae;
+        border-radius: 5px;
+        box-shadow: 2px 0 10px #ffffff6c;
+        transition: transform .35s ease-in-out;
+    }
+    
+    .account-info-container .text-field:hover,
+    .account-info-container .text-field:focus-within {
+        background-color: #ffffff;
+        transform: scale(1.05);
+    }
+    
+    .account-info-container .account-info-button {
+        font-family: 'Cairo', sans-serif;
+        margin-top: 10px;
+        background-color: #f9ec61;
+        color: #000000;
+        box-shadow: 2px 0 10px #757474;
+        transition: transform .3s ease-in-out;
+    }
+    
+    .account-info-container .account-info-button:hover {
+        background-color: #ffea00;
+        color: #000000;
+        transform: scale(1.15);
+    }
+}

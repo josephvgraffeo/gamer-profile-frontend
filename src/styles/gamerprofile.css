@@ -40,3 +40,54 @@
     margin: 10px;
     max-width: 100%;
 }
+
+/* mobile */
+@media screen and (max-width: 700px) {
+    .prof-main-box {
+        background-image: url("../../public/assets/images/library-background-image.webp");
+        background-position: fill;
+        height: 100vh;
+        width: 100vw;
+        max-width: 100%;
+        overflow: hidden;
+        display: block;
+    }
+    
+    .prof-main-box > .prof-main-grid {
+        height: 100%;
+        max-width: 100%;
+        display: block;
+    }
+    
+    .prof-main-box > .prof-main-grid > .prof-card-grid {
+        background-color: #34017756;
+        height: 100%;
+        width: 100%;
+        box-shadow: 5px 0px 20px #100032dc;
+        overflow: auto;
+        backdrop-filter: blur(5px);
+        display: block;
+    }
+    
+    .prof-main-box > .prof-main-grid > .prof-lib-grid {
+        height: 100%;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: auto;
+        display: block;
+    }
+    
+    .prof-main-box > .prof-main-grid > .prof-card-grid > .prof-card-box {
+        height: 100%;
+        margin: 10px;
+        max-width: 100%;
+        display: block;
+    }
+    
+    .prof-main-box > .prof-main-grid > .prof-lib-grid > .prof-lib-box {
+        height: 100%;
+        margin: 10px;
+        max-width: 100%;
+        display: block;
+    }
+}

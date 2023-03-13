@@ -20,7 +20,11 @@ div {
     box-shadow: 0px 0 10px #4c01cc;
 }
 
-.card-section-div h1, h2, h3, h4, h5 {
+.card-section-div h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: 'Cairo', sans-serif;
     color: #ffffff;
     font-size: 15px;
@@ -104,4 +108,118 @@ div {
     display: inline;
     margin-right: -5px;
     color: #ea1010;
+}
+
+/* mobile */
+@media screen and (max-width: 700px) {
+    div {
+        align-items: center;
+        text-align: center;
+        display: block;
+        overflow-y: scroll;
+    }
+
+    .card-section-div {
+        text-align: center;
+        background-color: #03002c15;
+        border-radius: 7px;
+        margin: 12px;
+        border: 1px solid #0400219f;
+        box-shadow: 7px 0 30px #040021cb;
+        padding: 3px;
+        backdrop-filter: blur(20px);
+        transition: transform 0.35s ease-in-out;
+        display: block;
+    }
+
+    .card-section-div:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 0 10px #4c01cc;
+    }
+
+    .card-section-div h1, h2, h3, h4, h5 {
+        font-family: 'Cairo', sans-serif;
+        color: #ffffff;
+        font-size: 15px;
+    }
+
+    .card-image {
+        margin: 5px;
+        border-radius: 50%;
+        height: 220px;
+        width: 220px;
+        align-content: center;
+        border: 5px solid #0400219f;
+        box-shadow: 7px 0 30px #040021cb;
+    }
+
+    .edit-card-text {
+        font-family: 'Cairo', sans-serif;
+        color: #ffffff;
+        text-align: right;
+        margin-top: -12px;
+    }
+
+    .edit-card-text .edit-button {
+        color: #ffffffc0;
+        text-align: right;
+        transition: transform 0.35s ease-in-out;
+    }
+
+    .edit-card-text .edit-button:hover {
+        color: #ffffff;
+        text-align: right;
+        transform: scale(1.2);
+    }
+
+    .text-field {
+        font-family: 'Cairo', sans-serif;
+        background-color: #ffffffb5;
+        border-radius: 5px;
+        text-align: center;
+        margin: 2px;
+        transition: transform 0.35s ease-in-out;
+    }
+
+    .text-field:hover,
+    .text-field:focus-visible {
+        font-family: 'Cairo', sans-serif;
+        background-color: #ffffff;
+        border-radius: 5px;
+        transform: scale(1.05);
+    }
+
+    .edit-button-group .save-button {
+        color: #3bb410;
+        transition: transform 0.35s ease-in-out;
+    }
+
+    .edit-button-group .save-button:hover {
+        color: #47e00f;
+        transform: scale(1.2);
+    }
+
+    .edit-button-group .cancel-button {
+        color: #e01212;
+        transition: transform 0.35s ease-in-out;
+    }
+
+    .edit-button-group .cancel-button:hover {
+        color: #ff0000;
+        transform: scale(1.2);
+    }
+
+    .save-button-text {
+        font-size: 15px;
+        display: inline;
+        margin-right: -5px;
+        color: #3bb410;
+    }
+
+    .cancel-button-text {
+        font-size: 15px;
+        display: inline;
+        margin-right: -5px;
+        color: #ea1010;
+    }
 }
