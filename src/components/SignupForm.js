@@ -33,7 +33,7 @@ export default function SignupForm() {
                             <Grid className="signup-form-main-grid" item xs={12}>
                                 <TextField
                                     label="Email"
-                                    variant="outlined"
+                                    variant="filled"
                                     value={email}
                                     className="text-field"
                                     onChange={handleEmailChange}
@@ -43,7 +43,7 @@ export default function SignupForm() {
                                 <TextField
                                     label="Password"
                                     type="password"
-                                    variant="outlined"
+                                    variant="filled"
                                     value={password}
                                     className="text-field"
                                     onChange={handlePasswordChange}

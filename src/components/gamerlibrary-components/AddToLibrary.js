@@ -88,8 +88,8 @@ export default function AddGameToLibrary(props) {
                 <br />
                 <FormControl onSubmit={handleSubmit} className="form-control">
                     <Rating name="rating" value={rating} precision={0.5} onChange={(e) => setRating(e.target.value)} />
-                    <TextField label="Hours Played" value={hours} onChange={(e) => setHours(e.target.value)} className="text-field" />
-                    <TextField label="Platform/Console" value={platform} onChange={(e) => setPlatform(e.target.value)} className="text-field" />
+                    <TextField variant="filled" label="Hours Played" value={hours} onChange={(e) => setHours(e.target.value)} className="text-field" />
+                    <TextField variant="filled" label="Platform/Console" value={platform} onChange={(e) => setPlatform(e.target.value)} className="text-field" />
                     <TextField label="Comments" value={comments} multiline rows={6} sx={{
                         width: '500px',
                         '& .MuiOutlinedInput-input': { width: '100%' },

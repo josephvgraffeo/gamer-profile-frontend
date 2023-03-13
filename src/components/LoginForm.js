@@ -34,7 +34,7 @@ export default function LoginForm() {
                             <Grid item xs={12}>
                                 <TextField
                                     label="Email"
-                                    variant="outlined"
+                                    variant="filled"
                                     value={email}
                                     className="text-field"
                                     onChange={handleEmailChange}
@@ -44,7 +44,7 @@ export default function LoginForm() {
                                 <TextField
                                     label="Password"
                                     type="password"
-                                    variant="outlined"
+                                    variant="filled"
                                     value={password}
                                     className="text-field"
                                     onChange={handlePasswordChange}
