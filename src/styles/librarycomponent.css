@@ -250,20 +250,6 @@
         position: absolute;
     }
 
-    .library-image:hover {
-        height: 185px;
-        width: 140px;
-        outline: 2px solid #000000;
-        box-shadow: 0px 0 20px #4c01cc;
-        border-radius: 2px;
-        margin: 2.3vw;
-        transform: scale(1.1);
-    }
-
-    .library-image:active {
-        transform: scale(1.15);
-    }
-
     .library-title {
         font-family: 'Cairo', sans-serif;
         color: #ffffff;

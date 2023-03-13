@@ -9,6 +9,7 @@ import "../../styles/infomodal.css";
 export default function Backlog() {
     const [backlogLibrary, setBacklogLibrary] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [infoIsLoading, setInfoIsLoading] = useState(true);
     const [formShowing, setFormShowing] = useState(false);
     const [infoModalData, setInfoModalData] = useState([]);
     const [infoModalShowing, setInfoModalShowing] = useState(false);
@@ -46,6 +47,7 @@ export default function Backlog() {
             .then((data) => {
                 console.log(data)
                 setInfoModalData([data])
+                setInfoIsLoading(false);
             })
             .catch((err) => console.error(err));
     }
@@ -100,7 +102,7 @@ export default function Backlog() {
                                 {backlogEntry.games.map((game) => (
                                     <div key={game.title} className="library-row">
                                         <img className="library-image" src={game.cover_image} alt={game.title} onClick={() => handleInfoModalShowing(game._id)} />
-                                        <h4 className="library-title">{game.title} <IconButton onClick={() => removeFromBacklogLibrary(game._id)}><HighlightOffIcon sx={{ color: "red" }} /></IconButton></h4>
+                                        <h4 className="library-title">{game.title} <IconButton onClick={() => removeFromBacklogLibrary(game._id)}><HighlightOffIcon sx={{ color: "red" }} className="delete-button" /></IconButton></h4>
                                     </div>
                                 ))}
                             </div>
@@ -113,16 +115,27 @@ export default function Backlog() {
                     )}
                     {infoModalShowing && (
                         <Modal className="info-modal" open={true} onClose={handleCloseInfoModal}>
-                            <div className="info-modal-content">
-                                {infoModalData.map((info) => (
-                                    <div key={info._id}>
-                                        <h4>Rating: </h4><Rating readOnly value={info.rating} />
-                                        <h4>Hours: </h4><p>{info.hours}</p>
-                                        <h4>Platform: </h4><p>{info.platform}</p>
-                                        <h4>Comments: </h4><p>{info.comments}</p>
-                                    </div>
-                                ))}
-                            </div>
+                            {infoIsLoading ? (
+                                <div className="loading-circle">
+                                    <CircularProgress style={{
+                                        color: "#ffffff",
+                                        position: "absolute",
+                                        zIndex: 100,
+                                        transform: "translate(-50%, -50%)",
+                                    }} />
+                                </div>
+                            ) : (
+                                <div className="info-modal-content">
+                                    {infoModalData.map((info) => (
+                                        <div key={info._id}>
+                                            <h4>Rating: </h4><Rating readOnly value={info.rating} />
+                                            <h4>Hours: </h4><p>{info.hours}</p>
+                                            <h4>Platform: </h4><p>{info.platform}</p>
+                                            <h4>Comments: </h4><p>{info.comments}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
                         </Modal>
                     )}
                 </div>
