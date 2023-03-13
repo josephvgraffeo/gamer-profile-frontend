@@ -11,22 +11,29 @@ export default function AddGameToLibrary(props) {
     const [platform, setPlatform] = useState("");
     const [comments, setComments] = useState("");
 
-    function handleAddGameToLibrary() {
-        fetch(`https://gamer-profile-project.web.app/gamerLibrary/${props.status}`, {
-            method: 'POST',
-            body: JSON.stringify({ gameId: selectedGame, _id: selectedGame }),
-            headers: { 'Content-Type': 'application/json' }
-        })
-            .then(res => res.json())
-            .then(data => {
-                setSelectedGame("");
+function handleAddGameToLibrary() {
+    fetch(`https://gamer-profile-project.web.app/gamerLibrary/${props.status}`, {
+        method: 'POST',
+        body: JSON.stringify({ gameId: selectedGame, _id: selectedGame }),
+        headers: { 'Content-Type': 'application/json' }
+    })
+        .then(res => res.json())
+        .then(data => {
+            setSelectedGame("");
+            if (props.status === "playing") {
                 props.getPlayingLibrary();
+            } else if (props.status === "completed") {
                 props.getCompletedLibrary();
+            } else if (props.status === "backlog") {
                 props.getBacklogLibrary();
-                return data._id
-            })
-            .catch(err => console.error(err))
-    }
+            }
+            return data._id
+        })
+        .then(() => {
+            handleAddAdditionalEntryInfo();
+        })
+        .catch(err => console.error(err))
+}
 
     function handleAddAdditionalEntryInfo() {
         fetch(`https://gamer-profile-project.web.app/entryInfo`, {
@@ -48,6 +55,7 @@ export default function AddGameToLibrary(props) {
         e.preventDefault();
         handleAddGameToLibrary();
         handleAddAdditionalEntryInfo();
+        props.handleCloseForm();
     }
 
     useEffect(() => {
