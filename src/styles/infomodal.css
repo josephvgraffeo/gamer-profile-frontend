@@ -24,3 +24,7 @@
     font-size: 17px;
     font-weight: bolder;
 }
+
+.info-modal-content .info-content-fields {
+    min-width: 650px;
+}

@@ -127,7 +127,7 @@ export default function Playing() {
                                 ) : (
                                     <div className="info-modal-content">
                                         {infoModalData.map((info) => (
-                                            <div key={info._id}>
+                                            <div key={info._id} className="info-content-fields">
                                                 <h4>Rating: </h4><Rating readOnly value={info.rating} />
                                                 <h4>Hours: </h4><p>{info.hours}</p>
                                                 <h4>Platform: </h4><p>{info.platform}</p>
